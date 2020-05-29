@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h3>Add post</h3>
+        <form method = "POST" action="/post/add">
+            <label>Write something</label><br>
+            <input type = "text" name = "value">
+            <br>
+            <label>Author</label><br>
+            <input type="text" name="author">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h1>Friends!</h1>
+        <ul>
+        <% friends.forEach(function(friends){ %>
+            <li><%=friends.name %> <%=friends.surname %></li>
+        <% }) %>
+        </ul>
+        
+        <h1>Posts</h1>
+        <ul>
+        <% post.forEach(function(post){ %>
+            <li><%=post.value %><br>
+                Posted by: <%=post.author%>
+            </li>
+            <br><br>
+        <% }) %>
+        </ul>
+        <div>
+            <h1>Login</h1>
+            <form action="auth" method="post">
+                <label for=""></label><input type="text" name="name" placeholder="Imię">
+                <label for=""></label><input type="text" name="surname" placeholder="Nazwisko"></br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        
+    </body>
+</html>
+
