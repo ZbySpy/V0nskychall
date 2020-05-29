@@ -3,6 +3,7 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const neo4j = require('neo4j-driver');
+const bcrypt = require('bcrypt');
 
 const app = express();
 
@@ -67,8 +68,6 @@ app.post('/post/add', function(req, res){
         .run('CREATE(n:Post {value:$valueParam, author:$authorParam}) RETURN n.value', {valueParam: value, authorParam: author})
         .then(function(result){
             res.redirect('/');
-
-            session.close();
         })
         .catch(function(err){
             console.log(err);
@@ -85,7 +84,7 @@ app.post('/auth', function(req, res){
         session
         .run('MATCH(n: Person) WHERE n.name = $name RETURN n;', {name: name})
         .then(result => {
-            if (result != null) {
+            if (result.records.length > 0) {
                 if (surname == result.records[0]._fields[0].properties.surname) {
                     res.send(`Hello ${name} ${surname}!`);
                  }else{
@@ -99,7 +98,26 @@ app.post('/auth', function(req, res){
     }else{
         res.send('Podaj login i hasło');
     }
+});
 
+app.post('/register', async function(req, res){
+    const name = req.body.name.trim();
+    const surname = req.body.surname.trim();
+    const email = req.body.email.trim();
+    const password = req.body.password.trim();
+
+    try {
+        const salt = await bcrypt.genSalt();
+        const hashedPassword = await bcrypt.hash(password, salt);
+        
+        session
+        .run('CREATE(n:Person {name:$name, surname:$surname, email:$email, password:$password}) RETURN n', {name:name, surname:surname, email:email, password:hashedPassword})
+        .then(function(result){
+            res.send(`Witaj ${result.records[0]._fields[0].properties.name} ${result.records[0]._fields[0].properties.surname}`);
+        });
+    } catch (error) {
+        res.status(500).send();
+    }
 });
 
 app.listen(3000);
