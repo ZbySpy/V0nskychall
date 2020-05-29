@@ -1,0 +1,24 @@
+<h3>Add post</h3>
+<form method = "POST" action="/post/add">
+    <label>Write something</label><br>
+    <input type = "text" name = "value">
+    <br>
+    <label>Author</label><br>
+    <input type="text" name="author">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h1>Friends</h1>
+<ul>
+<% friends.forEach(function(friends){ %>
+    <li><%=friends.name %></li>
+<% }) %>
+</ul>
+
+<h1>Posts</h1>
+<ul>
+<% post.forEach(function(post){ %>
+    <li><%=post.value %></li>
+<% }) %>
+</ul>
