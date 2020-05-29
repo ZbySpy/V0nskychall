@@ -25,8 +25,19 @@
 <div>
     <h1>Login</h1>
     <form action="auth" method="post">
-        <label for=""></label><input type="text" name="name" placeholder="Imię">
-        <label for=""></label><input type="text" name="surname" placeholder="Nazwisko"></br>
+        <label for=""></label><input type="text" name="email" placeholder="Email">
+        <label for=""></label><input type="password" name="password" placeholder="Password"></br>
         <button type="submit">Login</button>
+    </form>
+</div>
+
+<div>
+    <h1>Register</h1>
+    <form action="register" method="post">
+        <input type="text" name="name" placeholder="Imię">
+        <input type="text" name="surname" placeholder="Nazwisko"></br>
+        <input type="text" name="email" placeholder="example@email.com">
+        <input type="password" name="password" placeholder="Password"></br>
+        <button type="submit">Register</button>
     </form>
 </div>
