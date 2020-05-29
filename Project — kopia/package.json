@@ -4,15 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devstart": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "*",
     "body-parser": "*",
     "ejs": "^2.4.2",
+    "express": "*",
     "morgan": "*",
-    "neo4j-driver": "*"
+    "neo4j-driver": "*",
+    "nodemon": "^2.0.4"
   }
 }

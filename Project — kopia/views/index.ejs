@@ -9,7 +9,7 @@
     <input type="submit" value="Submit">
 </form>
 
-<h1>Friends</h1>
+<h1>Friends!</h1>
 <ul>
 <% friends.forEach(function(friends){ %>
     <li><%=friends.name %></li>
@@ -22,3 +22,11 @@
     <li><%=post.value %></li>
 <% }) %>
 </ul>
+<div>
+    <h1>Login</h1>
+    <form action="auth" method="post">
+        <label for=""></label><input type="text" name="name" placeholder="Imię">
+        <label for=""></label><input type="text" name="surname" placeholder="Nazwisko"></br>
+        <button type="submit">Login</button>
+    </form>
+</div>
