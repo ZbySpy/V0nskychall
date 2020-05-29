@@ -85,7 +85,7 @@ app.post('/auth', function(req, res){
         session
         .run('MATCH(n: Person) WHERE n.name = $name RETURN n;', {name: name})
         .then(result => {
-            if (result.length > 0) {
+            if (result != null) {
                 if (surname == result.records[0]._fields[0].properties.surname) {
                     res.send(`Hello ${name} ${surname}!`);
                  }else{
