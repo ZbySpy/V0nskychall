@@ -14,6 +14,7 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/views'));
 
@@ -77,14 +78,16 @@ app.post('/post/add', function(req, res){
 
 //Routing that authenticates user - version basic looks at name and surname
 app.post('/auth', function(req, res){
-    const email = req.body.email.trim();
-    const password = req.body.password.trim();
+    const email = req.body.email;
+    const password = req.body.password;
+    console.log(email);
+    console.log(password);
 
     if (email && password) {
         session
         .run('MATCH(n: Person) WHERE n.email = $email RETURN n;', {email: email})
         .then(result => {
-            if (result.records.length < 0) {
+            if (result.records.length < 1) {
                 res.send(res.send(`Użytkownik ${email} nie istnieje`));
             }
             try {
@@ -94,13 +97,13 @@ app.post('/auth', function(req, res){
                     res.send('Login lub hasło są nieprawidłowe');
                 }
             } catch {
-                res.statusCode(500).send();
+                res.status(500).send();
             }    
-
             })
-        }else{
-            res.send('Podaj login i hasło');
-        }
+    }else{
+        res.send(`${result}/${email}/${password}`);
+        //res.send('Podaj login i hasło');
+    }
 });
 
 app.post('/register', async function(req, res){
