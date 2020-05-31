@@ -4,8 +4,16 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const neo4j = require('neo4j-driver');
 const bcrypt = require('bcrypt');
+const exSession = require('express-session');
 
-const app = express();
+const app = express(),
+ passport = require('passport');
+
+const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j', '123456'));
+const session = driver.session();
+
+// Passport config
+require('./config/passport')(passport);
 
 //View Engine
 
@@ -17,8 +25,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j', '123456'));
-const session = driver.session();
+// Express session
+app.use(
+    exSession({
+      secret: 'secret',
+      resave: true,
+      saveUninitialized: true
+    })
+);
+
+// Passport middleware 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.get('/', function (req, res){
     session
@@ -82,7 +100,7 @@ app.post('/auth', function(req, res){
 
     if (email && password) {
         session
-        .run('MATCH(n: Person) WHERE n.email = $email RETURN n;', {email: email})
+        .run('MATCH(n: Person) WHERE n.email = $email RETURN n', {email: email})
         .then(result => {
             if (result.records.length < 0) {
                 res.send(res.send(`Użytkownik ${email} nie istnieje`));
