@@ -7,11 +7,13 @@ const session = driver.session();
 
 module.exports = function(passport) {
     passport.use(new LocalStrategy({usernameField: 'email'}, (username, password, done) => {
+        console.log(`${username}/${password}`);
         session.run('MATCH(n: Person) WHERE n.email = $email RETURN n', {email: username}).then(user => {
-            if (!user) {
+            //console.log(user);
+            if (user.records.length < 1) {
                 return done(null, false, {message: 'That email is not registered'});
             }
-            bcrypt.compare(password, user.password, (err, isMatch) => {
+            bcrypt.compare(password, user.records[0]._fields[0].properties.password, (err, isMatch) => {
                 if (err) 
                     throw err;
                 
@@ -29,14 +31,16 @@ module.exports = function(passport) {
     }));
     
     passport.serializeUser((user, done) => {
-        done(null, user.id);
+        //console.log(user.records[0]._fields[0].properties.email);
+        done(null, user.records[0]._fields[0].properties.email);
     });
     
-    passport.deserializeUser((id, done) => {
+    passport.deserializeUser((email, done) => {
+        console.log(`Deserialize: ${email}`);
         session
-        .run('MATCH(n: Person) WHERE n.id = $id RETURN n', {id: id})
-        .then((err, user) => {
-            done(err,user);
+        .run('MATCH(n: Person) WHERE n.email = $email RETURN n', {email: email})
+        .then((user) => {
+            done(null, user);
         })
         .catch(err => { if(err) throw err;});
     });
