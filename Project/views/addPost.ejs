@@ -1,0 +1,15 @@
+<ul>
+    <li><a href="/user/posts">Posty</a></li>
+    <li><a href="/user/post">Dodaj posta</a></li>
+    <li><a href="/user/friends">Znajomi</a></li>
+    <li><a href="/user/dashboard">Dashboard</a></li>
+</ul>
+<h3>Add post</h3>
+<form method = "POST" action="post">
+    <label>Write something</label><br>
+    <input type = "text" name = "value">
+    <br>
+    <input type="hidden" name="author" value=" <%= user.records[0]._fields[0].properties.name.concat(' ').concat(user.records[0]._fields[0].properties.surname) %> "> 
+    <br><br>
+    <input type="submit" value="Submit">
+</form>

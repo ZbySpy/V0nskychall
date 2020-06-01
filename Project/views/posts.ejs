@@ -1,0 +1,15 @@
+<ul>
+    <li><a href="/user/posts">Posty</a></li>
+    <li><a href="/user/post">Dodaj posta</a></li>
+    <li><a href="/user/friends">Znajomi</a></li>
+    <li><a href="/user/dashboard">Dashboard</a></li>
+</ul>
+<h1>Posts</h1>
+<ul>
+<% post.forEach(function(post){ %>
+    <li><%=post.value %><br>
+        Posted by: <%=post.author%>
+    </li>
+    <br><br>
+<% }) %>
+</ul>
