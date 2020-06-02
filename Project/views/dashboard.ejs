@@ -1,0 +1,11 @@
+<ul>
+    <li><a href="/user/posts">Posty</a></li>
+    <li><a href="/user/post">Dodaj posta</a></li>
+    <li><a href="/user/friends">Znajomi</a></li>
+    <li><a href="/user/dashboard">Dashboard</a></li>
+</ul>
+<h1>Hello <%= user.records[0]._fields[0].properties.name %></h1>
+
+<form action="logout" method="get">
+    <button type="submit">Logout</button>
+</form>
