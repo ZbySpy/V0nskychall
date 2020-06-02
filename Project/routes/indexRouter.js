@@ -10,7 +10,7 @@ const session = driver.session();
 // Get register screen
 router.get('/register', (req, res) => {
     res.render('register');
-})
+});
 
 // Register to website
 router.post('/register', async (req, res) =>{
@@ -19,14 +19,17 @@ router.post('/register', async (req, res) =>{
     const email = req.body.email.trim();
     const password = req.body.password.trim();
 
+    if (!name || !surname || !email || !password) {
+        res.render('register');
+    }
     try {
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);
         
         session
         .run('CREATE(n:Person {name:$name, surname:$surname, email:$email, password:$password}) RETURN n', {name:name, surname:surname, email:email, password:hashedPassword})
-        .then(result => {
-            res.send(`Witaj ${result.records[0]._fields[0].properties.name} ${result.records[0]._fields[0].properties.surname}`);
+        .then(() => {
+            res.render('login');
         });
     } catch (error) {
         res.status(500).send();
@@ -36,8 +39,7 @@ router.post('/register', async (req, res) =>{
 // Get login screen
 router.get('/login', (req, res) => {
     res.render('login');
-})
-
+});
 
 // Login handle
 router.post('/login', (req, res, next) => {
