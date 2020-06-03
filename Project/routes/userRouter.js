@@ -19,9 +19,9 @@ router.get('/users/:surname?', ensureAuthenticated , (req, res) => {
     });
 });
 
-//Get all friends of currently logged in user - with search by surname
-router.get('/friends/:surname?', ensureAuthenticated , (req, res) => {
-    session.run('MATCH(n: Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
+//Get people that you've invited - with search by surname
+router.get('/invited/:surname?', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
         const friendsArr = [];
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
@@ -30,6 +30,42 @@ router.get('/friends/:surname?', ensureAuthenticated , (req, res) => {
     }).catch(err => {
         console.log(err);
     });
+});
+
+//Get people that've invited you - with search by surname
+router.get('/invitedBy/:surname?', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(Person{email:$emailParam})<-[:FRIEND_WITH]-(m:Person) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
+        const friendsArr = [];
+        result.records.forEach(record => {
+            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
+        });
+        res.render('friends', {friends: friendsArr});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
+//Get all friends - with search by surname
+router.get('/friends/:surname?', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person)-[:FRIEND_WITH]->(Person{email:$emailParam}) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
+        const friendsArr = [];
+        result.records.forEach(record => {
+            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
+        });
+        res.render('friends', {friends: friendsArr});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
+// Add to friends
+router.post('/friends', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(n:Person{email:$emailParam}),(m:Person{email:$emailFriend}) CREATE (n)-[:FRIEND_WITH]->(m)', {emailParam: req.user.records[0]._fields[0].properties.email, emailFriend: req.body.properties.email}).then(result => {
+        res.redirect('/invited');
+    }).catch(err => {
+        console.log(err);
+    });
+
 });
 
 // Get posts - version beta / gets posts of all users
@@ -79,19 +115,6 @@ router.post('/post', ensureAuthenticated, (req, res) => {
         console.log(err);
     });
 });
-// router.post('/post', ensureAuthenticated, (req, res) => {
-//     const value = req.body.value;
-//     const author = req.body.author;
-
-//     session.run('CREATE(n:Post {value:$valueParam, author:$authorParam}) RETURN n.value', {
-//         valueParam: value,
-//         authorParam: author
-//     }).then(result => {
-//         res.redirect('posts');
-//     }).catch(err => {
-//         console.log(err);
-//     });
-// });
 
 // Get dashboard(mainscreen)
 router.get('/dashboard', ensureAuthenticated, (req, res) => {
@@ -106,18 +129,6 @@ router.get('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-// Search friend
-router.get('/friends', ensureAuthenticated , (req, res) => {
-    session.run('MATCH(n: Person) RETURN n;').then(result => {
-        const friendsArr = [];
-        result.records.forEach(record => {
-            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
-            res.render('friends', {friends: friendsArr});
-        });
-    }).catch(err => {
-        console.log(err);
-    });
-});
 module.exports = router;
 
 
