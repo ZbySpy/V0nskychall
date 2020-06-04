@@ -68,29 +68,17 @@ router.post('/friends', ensureAuthenticated, (req, res) => {
 
 });
 
-// Get posts - version beta / gets posts of all users
+// Get posts of your friends
 router.get('/posts', ensureAuthenticated, (req, res) => {
-    const friendsArr = [];
-
-    session.run('MATCH(n: Person) RETURN n;').then(result => {
+    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) OPTIONAL MATCH  RETURN n, p ORDER BY n.date', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
+        const postsArr = [];
         result.records.forEach(record => {
-            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
+            postsArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, date: record._fields[0].properties.date, surname: record._fields[1].properties.surname, name: record._fields[1].properties.name});
         });
-        session.run('MATCH(n: Post) RETURN n;').then(result => {
-            const PostArr = [];
-            result.records.forEach(record => {
-                PostArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, author: record._fields[0].properties.author});
-            });
-            res.render('posts', {
-                friends: friendsArr,
-                post: PostArr
-            });
-        }).catch(err => {
-            console.log(err);
-        });
+        res.render('posts', {posts: postsArr});
+    }).catch(err => {
+        console.log(err);
     });
-
-
 });
 
 // Get form to add posts
@@ -102,16 +90,34 @@ router.get('/post', ensureAuthenticated, (req, res) => {
 router.post('/post', ensureAuthenticated, (req, res) => {
     const value = req.body.value;
     const emailValue = req.user.records[0]._fields[0].properties.email;
+    const today = new Date();
+    let day = today.getDate(),
+        month = today.getMonth(),
+        year = today.getFullYear(),
+        time = today.getHours() + ":" + today.getMinutes();
 
-    session.run('Match(p:Person{email: $emailValue}) CREATE(p)<-[:POSTED_BY]-(b:Post{value:$valueParam}) RETURN p,b ', {
+    if (day < 10) { day = '0' + day; }
+    if (month < 10) { month = '0' + month; }
+
+    session.run('Match(p:Person{email: $emailValue}) CREATE(p)<-[:POSTED_BY]-(b:Post{value:$valueParam, date:$dateValue}) RETURN p,b ', {
         emailValue: emailValue, 
-        valueParam: value
+        valueParam: value,
+        dateValue: day + '-' + month + '-' + year + " " + time
     })
     .then(() => {
         res.redirect('posts');
     })
 
     .catch(err => {
+        console.log(err);
+    });
+});
+
+// Like post
+router.post('/like/:postID', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(p:Post) WHERE id(p)=$idValue CREATE (p)<-[:LIKE]-(m:Person{email: $emailValue}) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, idValue: req.params.postID}).then(result => {
+        res.render('posts', {posts: postsArr})
+    }).catch(err => {
         console.log(err);
     });
 });

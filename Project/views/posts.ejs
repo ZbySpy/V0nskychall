@@ -6,9 +6,10 @@
 </ul>
 <h1>Posts</h1>
 <ul>
-<% post.forEach(function(post){ %>
+<% posts.forEach(function(post){ %>
     <li><%=post.value %><br>
-        Posted by: <%=post.author%>
+        Posted by: <%=post.name + " " + post.surname%><br>
+        Date: <%=post.date%>
     </li>
     <br><br>
 <% }) %>
