@@ -47,7 +47,8 @@ router.get('/posts', ensureAuthenticated, (req, res) => {
             });
             res.render('posts', {
                 friends: friendsArr,
-                post: PostArr
+                post: PostArr,
+                user: req.user
             });
         }).catch(err => {
             console.log(err);

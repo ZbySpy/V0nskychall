@@ -4454,3 +4454,298 @@ java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte pr
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 18:43:25.810+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 53 checkpoint started...
+2020-06-04 18:43:25.925+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 53 checkpoint completed in 115ms
+2020-06-04 18:43:25.926+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-04 18:58:26.029+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 55 checkpoint started...
+2020-06-04 18:58:26.175+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 55 checkpoint completed in 144ms
+2020-06-04 18:58:26.175+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-04 19:30:33.176+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=278, gcTime=0, gcCount=0}
+2020-06-04 19:30:33.776+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=292, gcTime=0, gcCount=0}
+2020-06-04 19:30:34.084+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=418, gcTime=0, gcCount=0}
+2020-06-04 19:30:34.337+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=151, gcTime=0, gcCount=0}
+2020-06-04 19:30:34.685+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=247, gcTime=0, gcCount=0}
+2020-06-04 19:30:35.018+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=219, gcTime=0, gcCount=0}
+2020-06-04 19:30:35.264+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=129, gcTime=0, gcCount=0}
+2020-06-04 19:30:35.466+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=136, gcTime=0, gcCount=0}
+2020-06-04 19:30:35.819+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=240, gcTime=0, gcCount=0}
+2020-06-04 19:30:36.084+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=165, gcTime=0, gcCount=0}
+2020-06-04 19:30:36.326+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=149, gcTime=0, gcCount=0}
+2020-06-04 19:30:36.618+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=182, gcTime=0, gcCount=0}
+2020-06-04 19:30:36.903+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=195, gcTime=0, gcCount=0}
+2020-06-04 19:30:37.262+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=238, gcTime=0, gcCount=0}
+2020-06-04 19:30:37.827+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=202, gcTime=0, gcCount=0}
+2020-06-04 19:30:38.931+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=1092, gcTime=0, gcCount=0}
+2020-06-04 19:30:39.593+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=553, gcTime=0, gcCount=0}
+2020-06-04 19:30:40.953+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=1267, gcTime=0, gcCount=0}
+2020-06-04 19:30:41.511+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=456, gcTime=0, gcCount=0}
+2020-06-04 19:30:42.043+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=405, gcTime=0, gcCount=0}
+2020-06-04 19:30:42.864+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=748, gcTime=0, gcCount=0}
+2020-06-04 19:30:43.136+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=164, gcTime=0, gcCount=0}
+2020-06-04 19:30:43.696+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=466, gcTime=0, gcCount=0}
+2020-06-04 19:30:44.262+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=466, gcTime=0, gcCount=0}
+2020-06-04 19:30:44.603+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=242, gcTime=0, gcCount=0}
+2020-06-04 19:30:44.856+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=144, gcTime=0, gcCount=0}
+2020-06-04 19:30:45.160+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=211, gcTime=0, gcCount=0}
+2020-06-04 19:30:45.598+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=340, gcTime=0, gcCount=0}
+2020-06-04 19:30:46.012+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=314, gcTime=0, gcCount=0}
+2020-06-04 19:30:46.390+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=272, gcTime=0, gcCount=0}
+2020-06-04 19:30:46.655+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=170, gcTime=0, gcCount=0}
+2020-06-04 19:30:46.888+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=132, gcTime=0, gcCount=0}
+2020-06-04 19:30:47.609+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=112, gcTime=0, gcCount=0}
+2020-06-04 19:35:00.342+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=132, gcTime=0, gcCount=0}
+2020-06-04 19:35:01.005+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=199, gcTime=0, gcCount=0}
+2020-06-04 19:35:01.270+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=164, gcTime=0, gcCount=0}
+2020-06-04 19:35:01.584+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=214, gcTime=0, gcCount=0}
+2020-06-04 19:35:03.229+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=391, gcTime=0, gcCount=0}
+2020-06-04 19:35:03.469+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=141, gcTime=0, gcCount=0}
+2020-06-04 19:35:03.717+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=148, gcTime=0, gcCount=0}
+2020-06-04 19:35:04.052+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=217, gcTime=0, gcCount=0}
+2020-06-04 19:35:04.458+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=320, gcTime=0, gcCount=0}
+2020-06-04 19:35:04.716+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=163, gcTime=0, gcCount=0}
+2020-06-04 19:36:47.290+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=101, gcTime=0, gcCount=0}
+2020-06-04 19:36:51.077+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=100, gcTime=0, gcCount=0}
+2020-06-04 19:37:51.964+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=147, gcTime=0, gcCount=0}
+2020-06-04 19:42:52.561+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=151, gcTime=0, gcCount=0}
+2020-06-04 19:43:56.213+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=145, gcTime=0, gcCount=0}
+2020-06-04 19:43:59.341+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=104, gcTime=0, gcCount=0}
+2020-06-04 19:44:21.415+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=126, gcTime=0, gcCount=0}
+2020-06-04 19:44:47.218+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=137, gcTime=0, gcCount=0}
+2020-06-04 19:45:01.642+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=106, gcTime=0, gcCount=0}
+2020-06-04 19:45:38.972+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=134, gcTime=0, gcCount=0}
+2020-06-04 19:45:39.216+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=149, gcTime=0, gcCount=0}
+2020-06-04 19:46:00.307+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=108, gcTime=0, gcCount=0}
+2020-06-04 20:08:19.472+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x8525af1f, L:/127.0.0.1:7687 - R:/127.0.0.1:59126] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 20:08:19.474+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x6704d750, L:/127.0.0.1:7687 - R:/127.0.0.1:60414] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 20:08:19.476+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x1a43ee57, L:/127.0.0.1:7687 - R:/127.0.0.1:60413] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 20:12:53.978+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=192, gcTime=0, gcCount=0}
+2020-06-04 20:12:57.443+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=108, gcTime=0, gcCount=0}
+2020-06-04 20:13:00.231+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=118, gcTime=0, gcCount=0}
+2020-06-04 20:13:00.664+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=139, gcTime=0, gcCount=0}
+2020-06-04 20:13:01.078+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=115, gcTime=0, gcCount=0}
+2020-06-04 20:13:13.212+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=124, gcTime=0, gcCount=0}
+2020-06-04 20:13:14.207+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=128, gcTime=0, gcCount=0}
+2020-06-04 20:13:14.726+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=127, gcTime=0, gcCount=0}
+2020-06-04 20:13:16.280+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=124, gcTime=0, gcCount=0}
+2020-06-04 20:13:23.817+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=117, gcTime=0, gcCount=0}
+2020-06-04 20:14:00.392+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=118, gcTime=0, gcCount=0}
+2020-06-04 20:14:00.512+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=120, gcTime=0, gcCount=0}
+2020-06-04 20:14:07.059+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=108, gcTime=0, gcCount=0}
+2020-06-04 20:14:07.304+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=196, gcTime=0, gcCount=0}
+2020-06-04 20:14:08.817+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=105, gcTime=0, gcCount=0}
+2020-06-04 20:14:10.688+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=119, gcTime=0, gcCount=0}
+2020-06-04 20:19:28.633+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=108, gcTime=0, gcCount=0}
+2020-06-04 20:20:26.559+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=102, gcTime=0, gcCount=0}
+2020-06-04 20:20:52.171+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=100, gcTime=0, gcCount=0}
+2020-06-04 20:38:32.515+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=129, gcTime=0, gcCount=0}
+2020-06-04 20:52:47.983+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 56 checkpoint started...
+2020-06-04 20:52:48.091+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 56 checkpoint completed in 107ms
+2020-06-04 20:52:48.092+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-04 20:53:02.102+0000 INFO [o.n.c.i.ExecutionEngine] [neo4j] Discarded stale query from the query cache after 13827 seconds: 
+CALL db.labels() YIELD label
+RETURN {name:'labels', data:COLLECT(label)[..1000]} AS result
+UNION ALL
+CALL db.relationshipTypes() YIELD relationshipType
+RETURN {name:'relationshipTypes', data:COLLECT(relationshipType)[..1000]} AS result
+UNION ALL
+CALL db.propertyKeys() YIELD propertyKey
+RETURN {name:'propertyKeys', data:COLLECT(propertyKey)[..1000]} AS result
+UNION ALL
+CALL dbms.functions() YIELD name, signature, description
+RETURN {name:'functions', data: collect({name: name, signature: signature, description: description})} AS result
+UNION ALL
+CALL dbms.procedures() YIELD name, signature, description
+RETURN {name:'procedures', data:collect({name: name, signature: signature, description: description})} AS result
+UNION ALL
+MATCH () RETURN { name:'nodes', data:count(*) } AS result
+UNION ALL
+MATCH ()-[]->() RETURN { name:'relationships', data: count(*)} AS result
+
+2020-06-04 20:54:49.795+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=114, gcTime=0, gcCount=0}
+2020-06-04 20:55:23.092+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=143, gcTime=0, gcCount=0}
+2020-06-04 21:02:59.068+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x942053bc, L:/127.0.0.1:7687 - R:/127.0.0.1:61037] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 21:02:59.070+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x67bf9eec, L:/127.0.0.1:7687 - R:/127.0.0.1:61036] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 21:07:48.256+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 57 checkpoint started...
+2020-06-04 21:07:48.398+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 57 checkpoint completed in 136ms
+2020-06-04 21:07:48.398+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-04 21:26:41.887+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=106, gcTime=0, gcCount=0}
+2020-06-04 21:35:47.874+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=120, gcTime=0, gcCount=0}
+2020-06-04 21:38:25.791+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=125, gcTime=0, gcCount=0}
+2020-06-04 21:38:30.911+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=154, gcTime=0, gcCount=0}
+2020-06-04 21:48:31.293+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=155, gcTime=0, gcCount=0}
+2020-06-04 21:49:48.891+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=133, gcTime=0, gcCount=0}
+2020-06-04 21:59:15.061+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xc4c74bc2, L:/127.0.0.1:7687 - R:/127.0.0.1:51904] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 21:59:15.062+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x4154a959, L:/127.0.0.1:7687 - R:/127.0.0.1:51902] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 22:01:13.544+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x14a4dd46, L:/127.0.0.1:7687 - R:/127.0.0.1:51935] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-04 22:01:13.554+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x1385e615, L:/127.0.0.1:7687 - R:/127.0.0.1:51938] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
