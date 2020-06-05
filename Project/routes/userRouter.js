@@ -52,7 +52,7 @@ router.get('/friends/:surname?', ensureAuthenticated, (req, res) => {
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
         });
-        res.render('friends', {friends: friendsArr});
+        res.render('friends', {friends: friendsArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });
