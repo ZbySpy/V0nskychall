@@ -175,12 +175,15 @@ router.post('/like', ensureAuthenticated, (req, res) => {
     });
 });
 
-// Get dashboard(mainscreen)
-router.get('/dashboard', ensureAuthenticated, (req, res) => {
-    res.render('dashboard', {
-        user: req.user
+// Change email
+router.put('/email', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(n:Person) WHERE n.email = $emailValue SET n.email = $newEmail', {emailValue: req.user.records[0]._fields[0].properties.email, newEmail: req.body.newEmail}).then(result => {
+        res.logout();
+        res.redirect('/login');
+    }).catch(err => {
+        console.log(err);
     });
-});
+})
 
 // Logout handle
 router.get('/logout', (req, res) => {
