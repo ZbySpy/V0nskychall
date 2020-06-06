@@ -157,7 +157,20 @@ router.post('/post', ensureAuthenticated, (req, res) => {
 
 // Like post
 router.post('/like', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(p:Post{value: $postValue}) CREATE (p)<-[:LIKE]-(m:Person{email: $emailValue}) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+    session.run('MATCH(p:Post{value: $postValue})<-[r:LIKE]-(m:Person{email: $emailValue}) RETURN COUNT(r)', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result =>{
+        if(result.records[0]._fields[0].low == 0){
+            session.run('MATCH(p:Post{value: $postValue}), (m:Person{email: $emailValue}) CREATE (p)<-[:LIKE]-(m) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+                res.redirect('posts');
+            }).catch(err => {
+                console.log(err);
+            });
+        }else{
+            session.run('MATCH(p:Post{value: $postValue})<-[r:LIKE]-(m:Person{email: $emailValue}) DELETE r', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+                res.redirect('posts');
+            }).catch(err => {
+                console.log(err);
+            });
+        }
         res.redirect('posts');
     }).catch(err => {
         console.log(err);
