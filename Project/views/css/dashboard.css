@@ -1,11 +1,16 @@
 body {
     color: #000000;
-    background: #63738a;
     font-family: 'Lato', sans-serif;
     padding-top: 50px;
     position: relative;
     font-size: 15px;
-}
+    background: url(https://images.hdqwalls.com/download/blur-background-6z-1280x720.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
 
 pre {
     tab-size: 8;

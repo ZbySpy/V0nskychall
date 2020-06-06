@@ -6,9 +6,24 @@ const { ensureAuthenticated } = require('../config/auth')
 const driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j', '123456'));
 const session = driver.session();
 
+// Get users list 
+router.get('/users', ensureAuthenticated , (req, res) => {
+    console.log(req.body.surname);
+    session.run('MATCH(n: Person) WHERE n.surname CONTAINS $surname RETURN n;', {surname: req.body.surname ? req.body.surname : ""}).then(result => {
+        const usersArr = [];
+        result.records.forEach(record => {
+            usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
+        });
+        console.log(usersArr);
+        res.render('users', {friends: usersArr});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
 // Get users list - with search by surname
-router.get('/users/:surname?', ensureAuthenticated , (req, res) => {
-    session.run('MATCH(n: Person) WHERE n.surname CONTAINS $surname RETURN n;', {surname: req.params.surname ? req.params.surname : ""}).then(result => {
+router.post('/users', ensureAuthenticated , (req, res) => {
+    session.run('MATCH(n: Person) WHERE n.surname CONTAINS $surname RETURN n;', {surname: req.body.surname ? req.body.surname : ""}).then(result => {
         const usersArr = [];
         result.records.forEach(record => {
             usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
@@ -19,9 +34,22 @@ router.get('/users/:surname?', ensureAuthenticated , (req, res) => {
     });
 });
 
-//Get people that you've invited - with search by surname
+//Get people that you've invited
 router.get('/invited/:surname?', ensureAuthenticated, (req, res) => {
     session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
+        const friendsArr = [];
+        result.records.forEach(record => {
+            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
+        });
+        res.render('invited', {friends: friendsArr});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
+//Get people that you've invited - with search by surname
+router.post('/invited', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.body.surname ? req.body.surname : ""}).then(result => {
         const friendsArr = [];
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
@@ -45,9 +73,22 @@ router.get('/invitedBy/:surname?', ensureAuthenticated, (req, res) => {
     });
 });
 
-//Get all friends - with search by surname
+//Get all friends 
 router.get('/friends/:surname?', ensureAuthenticated, (req, res) => {
     session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person)-[:FRIEND_WITH]->(Person{email:$emailParam}) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.params.surname ? req.params.surname : ""}).then(result => {
+        const friendsArr = [];
+        result.records.forEach(record => {
+            friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
+        });
+        res.render('friends', {friends: friendsArr, user: req.user});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
+//Get all friends - with search by surname
+router.post('/friends', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person)-[:FRIEND_WITH]->(Person{email:$emailParam}) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.body.surname ? req.body.surname : ""}).then(result => {
         const friendsArr = [];
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
@@ -70,10 +111,11 @@ router.post('/friends', ensureAuthenticated, (req, res) => {
 
 // Get posts of your friends
 router.get('/posts', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) RETURN n, p ORDER BY n.date;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
+    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) OPTIONAL MATCH ()-[r:LIKE]->(n)-[:POSTED_BY]->(p)<-[:FRIEND_WITH]-(m) RETURN n, p, COUNT(r) ORDER BY n.date;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
         const postsArr = [];
         result.records.forEach(record => {
-            postsArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, date: record._fields[0].properties.date, surname: record._fields[1].properties.surname, name: record._fields[1].properties.name});
+            console.log(record._fields[2]);
+            postsArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, date: record._fields[0].properties.date, surname: record._fields[1].properties.surname, name: record._fields[1].properties.name, likes: record._fields[2].low});
         });
         res.render('posts', {post: postsArr, user: req.user});
     }).catch(err => {
@@ -114,9 +156,9 @@ router.post('/post', ensureAuthenticated, (req, res) => {
 });
 
 // Like post
-router.post('/like/:postID', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(p:Post) WHERE id(p)=$idValue CREATE (p)<-[:LIKE]-(m:Person{email: $emailValue}) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, idValue: req.params.postID}).then(result => {
-        res.render('posts', {posts: postsArr})
+router.post('/like', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(p:Post{value: $postValue}) CREATE (p)<-[:LIKE]-(m:Person{email: $emailValue}) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+        res.redirect('posts');
     }).catch(err => {
         console.log(err);
     });
