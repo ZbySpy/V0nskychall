@@ -1,0 +1,103 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" id="bootstrap-css">
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="/css/friends.css">
+
+    </head>
+    <body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-inverse">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/posts">
+                            <h4>My Wall
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/user/invited">
+                            <h4>Following
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/user/friends">
+                            <h4>Followers
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/user/users">
+                            <h4>Users
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/user/dashboard">
+                            <h4>Dashboard
+                            </h4>
+                        </a>
+                    </li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/user/logout">
+                                <span class="glyphicon glyphicon-log-in"></span>
+                                Logout</a>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="people-nearby">
+                        <form method="post" action="users">
+                            <input type="text" placeholder="Search.." name="surname" >
+                            <button type="submit" ><i class="fa fa-search">Search</i></button>
+                        </form>
+                        <% friends.forEach(function(friends){ %>
+                            <div class="nearby-user">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-2">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
+                                        <br><br>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7">
+                                        <h5>
+                                            <h2><%=friends.name %>
+                                                <%=friends.surname %></h2>
+                                        </h5>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <form method="POST" action="friends">
+                                            <input type="hidden" name = "emailFriend" value="<%=friends.email%>">
+                                            <button type="submit" class="btn btn-danger pull-right"><%=friends.email%></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
