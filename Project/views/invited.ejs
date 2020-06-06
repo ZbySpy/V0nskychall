@@ -20,6 +20,7 @@
     </head>
     <body>
 
+
         <nav class="navbar navbar-expand-lg navbar-inverse">
             <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -30,8 +31,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="/user/invited">
+                            <h4>Following
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" href="/user/friends">
-                            <h4>My friends
+                            <h4>Followers
                             </h4>
                         </a>
                     </li>
@@ -57,11 +64,10 @@
                 </ul>
             </div>
         </nav>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <h1 class="text-success">Invited people, you have to wait for accept your invitation!</h1>
+                    <h1 class="text-success">There are people, which you are following</h1>
                     <br><br>
                     <form method="post" action="invited">
                         <input type="text" placeholder="Search.." name="surname" >
