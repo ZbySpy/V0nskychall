@@ -25,7 +25,7 @@ router.post('/register', async (req, res) =>{
     try {
         const salt = await bcrypt.genSalt();
         const hashedPassword = await bcrypt.hash(password, salt);
-
+        
         session
         .run('CREATE(n:Person {name:$name, surname:$surname, email:$email, password:$password}) RETURN n', {name:name, surname:surname, email:email, password:hashedPassword})
         .then(() => {
@@ -33,7 +33,7 @@ router.post('/register', async (req, res) =>{
                 res.render('login');
             }).catch(err => {
                 console.log(err); 
-            });
+            });                  
         });
     } catch (error) {
         res.status(500).send();
