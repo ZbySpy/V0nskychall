@@ -24,7 +24,7 @@
             <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-success">
+                        <a href = "/user/email" class="nav-link text-success">
                             <h4> Welcome: <i><%= user.records[0]._fields[0].properties.name %></i>
                             </h4>
                         </a>
@@ -55,7 +55,12 @@
                         </a>
                     </li>
                     <ul class="nav navbar-nav navbar-right">
-                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/email">
+                                <h4>Account
+                                </h4>
+                            </a>
+                        </li>
                         <li>
                             <a href="/user/logout">
                                 <span class="glyphicon glyphicon-log-in"></span>
@@ -70,10 +75,15 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="people-nearby">
-                        <form method="post" action="users">
-                            <input type="text" placeholder="Search.." name="surname" >
-                            <button type="submit" ><i class="fa fa-search">Search</i></button>
+                        <form method="post" action="users" class="pull-right">
+                            <input type="text" placeholder="Insert email.." name="surname" >
+                            <button type="submit" ><i class="fa fa-search">Find connections</i></button>
                         </form>
+                        <form method="post" action="users">
+                            <input type="email" placeholder="Search.." name="email" >
+                            <button type="submit" ><i class="fa fa-search">Search by surname</i></button>
+                        </form>
+                        
                         <% friends.forEach(function(friends){ %>
                             <div class="nearby-user">
                                 <div class="row">
@@ -85,6 +95,7 @@
                                         <h5>
                                             <h2><%=friends.name %>
                                                 <%=friends.surname %></h2>
+                                                <h5><%=friends.email %></h5>
                                         </h5>
                                     </div>
                                     <div class="col-md-3 col-sm-3">

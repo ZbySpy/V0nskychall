@@ -19,7 +19,6 @@
 
     </head>
     <body>
-
         <nav class="navbar navbar-expand-lg navbar-inverse">
             <div class="navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -35,7 +34,7 @@
                             </h4>
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link active" href="/user/invited">
                             <h4>Following
                             </h4>
@@ -55,7 +54,7 @@
                         </a>
                     </li>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="/user/email">
                                 <h4>Account
                                 </h4>
@@ -70,36 +69,15 @@
                 </ul>
             </div>
         </nav>
-
         <div class="container">
+            <div class="text-success">You can change your email below</div>
+            <br>
             <div class="row">
                 <div class="col-md-8">
-                    <h1 class="text-success">There are people, which you are following</h1>
-                    <br>
-                    <form method="post" action="invited">
-                        <input type="text" placeholder="Search.." name="surname" >
-                        <button type="submit" ><i class="fa fa-search">Search</i></button>
+                    <form method="post" action="email">
+                        <input type="email" required = "required" name = "newEmail" placeholder="Email..">
+                        <button type="submit" class="btn btn-danger pull">Change</button>
                     </form>
-                    <div class="people-nearby">
-                        <% friends.forEach(function(friends){ %>
-                            <div class="nearby-user">
-                                <div class="row">
-                                    <div class="col-md-2 col-sm-2">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user" class="profile-photo-lg">
-                                        <br><br>
-                                    </div>
-                                    <div class="col-md-7 col-sm-7">
-                                        <h5>
-                                            <h2><%=friends.name %>
-                                                <%=friends.surname %></h2>
-                                        </h5>
-                                    </div>
-                                    <div class="col-md-3 col-sm-3">
-                                    </div>
-                                </div>
-                            </div>
-                        <% }) %>
-                    </div>
                 </div>
             </div>
         </div>

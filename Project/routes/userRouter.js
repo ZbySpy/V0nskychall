@@ -175,10 +175,16 @@ router.post('/like', ensureAuthenticated, (req, res) => {
     });
 });
 
+//Render email site 
+router.get('/email', ensureAuthenticated, (req, res) => {
+    res.render('email', {user: req.user});
+})
+
 // Change email
-router.put('/email', ensureAuthenticated, (req, res) => {
+router.post('/email', ensureAuthenticated, (req, res) => {
+    console.log(req.body.newEmail);
     session.run('MATCH(n:Person) WHERE n.email = $emailValue SET n.email = $newEmail', {emailValue: req.user.records[0]._fields[0].properties.email, newEmail: req.body.newEmail}).then(result => {
-        res.logout();
+        req.logout();
         res.redirect('/login');
     }).catch(err => {
         console.log(err);
