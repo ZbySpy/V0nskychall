@@ -56,7 +56,7 @@ router.post('/findConnection', ensureAuthenticated, (req, res) => {
         target = result.records[0]._fields[0].end.properties.name+' '+result.records[0]._fields[0].end.properties.surname;
         result.records[0]._fields[0].segments.forEach(record => {
             conArr.push({startName: record.start.properties.name + " " + record.start.properties.surname, 
-            relation: record.relationship.type=="FRIEND_WITH" ? "is friend with" : "", endName: record.end.properties.name + " " + record.end.properties.surname});
+            relation: record.relationship.type=="FRIEND_WITH" ? "is friend with" : record.relationship.type, endName: record.end.properties.name + " " + record.end.properties.surname});
         })
         res.render('contact', {contact: conArr, user: req.user, target});
     }).catch(err => {
@@ -224,7 +224,7 @@ router.post('/post', ensureAuthenticated, (req, res) => {
     session.run('Match(p:Person{email: $emailValue}) CREATE(p)<-[:POSTED_BY]-(b:Post{value:$valueParam, date:$dateValue}) RETURN p,b ', {
         emailValue: emailValue,
         valueParam: value,
-        dateValue: day + '-' + month + '-' + year + " " + time
+        dateValue: time + " " + day + '-' + month + '-' + year
     }).then(() => {
         res.redirect('posts');
     }).catch(err => {
