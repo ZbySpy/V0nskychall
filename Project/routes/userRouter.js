@@ -15,7 +15,7 @@ router.get('/users', ensureAuthenticated , (req, res) => {
             usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
         });
         console.log(usersArr);
-        res.render('users', {friends: usersArr});
+        res.render('users', {friends: usersArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });
@@ -28,7 +28,7 @@ router.post('/users', ensureAuthenticated , (req, res) => {
         result.records.forEach(record => {
             usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
         });
-        res.render('users', {friends: usersArr});
+        res.render('users', {friends: usersArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });
@@ -41,7 +41,7 @@ router.get('/invited/:surname?', ensureAuthenticated, (req, res) => {
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
         });
-        res.render('invited', {friends: friendsArr});
+        res.render('invited', {friends: friendsArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });
@@ -54,7 +54,7 @@ router.post('/invited', ensureAuthenticated, (req, res) => {
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
         });
-        res.render('invited', {friends: friendsArr});
+        res.render('invited', {friends: friendsArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });
@@ -67,7 +67,7 @@ router.get('/invitedBy/:surname?', ensureAuthenticated, (req, res) => {
         result.records.forEach(record => {
             friendsArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname});
         });
-        res.render('friends', {friends: friendsArr});
+        res.render('friends', {friends: friendsArr, user: req.user});
     }).catch(err => {
         console.log(err);
     });

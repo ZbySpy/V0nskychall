@@ -9596,3 +9596,965 @@ java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte pr
 2020-06-06 11:45:09.613+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 161 checkpoint started...
 2020-06-06 11:45:09.747+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Scheduled checkpoint for every 15 minutes threshold" @ txId: 161 checkpoint completed in 133ms
 2020-06-06 11:45:09.748+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-06 14:59:51.396+0000 WARN [o.n.k.i.JvmChecker] The dbms.memory.heap.max_size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 2124414976 bytes is used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2020-06-06 14:59:51.396+0000 WARN [o.n.k.i.JvmChecker] The dbms.memory.heap.initial_size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a JVM computed heuristic of 134217728 bytes is used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2020-06-06 14:59:51.433+0000 WARN [o.n.i.p.PageCache] The dbms.memory.pagecache.size setting has not been configured. It is recommended that this setting is always explicitly configured, to ensure the system has a balanced configuration. Until then, a computed heuristic value of 3183163392 bytes will be used instead. Run `neo4j-admin memrec` for memory configuration suggestions.
+2020-06-06 14:59:51.480+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 14:59:51.481+0000 INFO [o.n.i.d.DiagnosticsManager]                              [ System diagnostics ]                             
+2020-06-06 14:59:51.481+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 14:59:51.488+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.488+0000 INFO [o.n.i.d.DiagnosticsManager]                          [ System memory information ]                          
+2020-06-06 14:59:51.489+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.505+0000 INFO [o.n.i.d.DiagnosticsManager] Total Physical memory: 7.908GiB
+2020-06-06 14:59:51.506+0000 INFO [o.n.i.d.DiagnosticsManager] Free Physical memory: 1.450GiB
+2020-06-06 14:59:51.510+0000 INFO [o.n.i.d.DiagnosticsManager] Committed virtual memory: 251.8MiB
+2020-06-06 14:59:51.511+0000 INFO [o.n.i.d.DiagnosticsManager] Total swap space: 11.60GiB
+2020-06-06 14:59:51.512+0000 INFO [o.n.i.d.DiagnosticsManager] Free swap space: 1.763GiB
+2020-06-06 14:59:51.513+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.513+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.513+0000 INFO [o.n.i.d.DiagnosticsManager]                            [ JVM memory information ]                           
+2020-06-06 14:59:51.514+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.515+0000 INFO [o.n.i.d.DiagnosticsManager] Free  memory: 111.0MiB
+2020-06-06 14:59:51.519+0000 INFO [o.n.i.d.DiagnosticsManager] Total memory: 128.0MiB
+2020-06-06 14:59:51.520+0000 INFO [o.n.i.d.DiagnosticsManager] Max   memory: 1.979GiB
+2020-06-06 14:59:51.540+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Young Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2020-06-06 14:59:51.541+0000 INFO [o.n.i.d.DiagnosticsManager] Garbage Collector: G1 Old Generation: [G1 Eden Space, G1 Survivor Space, G1 Old Gen]
+2020-06-06 14:59:51.551+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'non-nmethods' (Non-heap memory): committed=2.438MiB, used=1.121MiB, max=5.563MiB, threshold=0B
+2020-06-06 14:59:51.553+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Metaspace (Non-heap memory): committed=20.13MiB, used=19.47MiB, max=-1B, threshold=0B
+2020-06-06 14:59:51.554+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'profiled nmethods' (Non-heap memory): committed=3.063MiB, used=3.062MiB, max=117.2MiB, threshold=0B
+2020-06-06 14:59:51.555+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: Compressed Class Space (Non-heap memory): committed=2.125MiB, used=1.906MiB, max=1024MiB, threshold=0B
+2020-06-06 14:59:51.556+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Eden Space (Heap memory): committed=33.00MiB, used=5.000MiB, max=-1B, threshold=?
+2020-06-06 14:59:51.557+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Old Gen (Heap memory): committed=94.00MiB, used=10.96MiB, max=1.979GiB, threshold=0B
+2020-06-06 14:59:51.558+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: G1 Survivor Space (Heap memory): committed=1024KiB, used=1024KiB, max=-1B, threshold=?
+2020-06-06 14:59:51.563+0000 INFO [o.n.i.d.DiagnosticsManager] Memory Pool: CodeHeap 'non-profiled nmethods' (Non-heap memory): committed=2.438MiB, used=643.8KiB, max=117.3MiB, threshold=0B
+2020-06-06 14:59:51.564+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.566+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.567+0000 INFO [o.n.i.d.DiagnosticsManager]                         [ Operating system information ]                        
+2020-06-06 14:59:51.568+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.569+0000 INFO [o.n.i.d.DiagnosticsManager] Operating System: Windows 10; version: 10.0; arch: amd64; cpus: 4
+2020-06-06 14:59:51.599+0000 INFO [o.n.i.d.DiagnosticsManager] Process id: 1984@EF-L-0005
+2020-06-06 14:59:51.600+0000 INFO [o.n.i.d.DiagnosticsManager] Byte order: LITTLE_ENDIAN
+2020-06-06 14:59:51.636+0000 INFO [o.n.i.d.DiagnosticsManager] Local timezone: Europe/Belgrade
+2020-06-06 14:59:51.640+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.641+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.643+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ JVM information ]                               
+2020-06-06 14:59:51.643+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.645+0000 INFO [o.n.i.d.DiagnosticsManager] VM Name: Java HotSpot(TM) 64-Bit Server VM
+2020-06-06 14:59:51.648+0000 INFO [o.n.i.d.DiagnosticsManager] VM Vendor: Oracle Corporation
+2020-06-06 14:59:51.650+0000 INFO [o.n.i.d.DiagnosticsManager] VM Version: 11.0.2+9-LTS
+2020-06-06 14:59:51.651+0000 INFO [o.n.i.d.DiagnosticsManager] JIT compiler: HotSpot 64-Bit Tiered Compilers
+2020-06-06 14:59:51.652+0000 INFO [o.n.i.d.DiagnosticsManager] VM Arguments: [-XX:+UseG1GC, -XX:-OmitStackTraceInFastThrow, -XX:+AlwaysPreTouch, -XX:+UnlockExperimentalVMOptions, -XX:+TrustFinalNonStaticFields, -XX:+DisableExplicitGC, -Djdk.nio.maxCachedBufferSize=262144, -Dio.netty.tryReflectionSetAccessible=true, -Djdk.tls.ephemeralDHKeySize=2048, -Djdk.tls.rejectClientInitiatedRenegotiation=true, -Dfile.encoding=UTF-8]
+2020-06-06 14:59:51.653+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.653+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.654+0000 INFO [o.n.i.d.DiagnosticsManager]                                [ Java classpath ]                               
+2020-06-06 14:59:51.654+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.813+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-text-1.7.jar
+2020-06-06 14:59:51.814+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-resource-4.0.4.jar
+2020-06-06 14:59:51.815+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-parser-4.0-4.0.4.jar
+2020-06-06 14:59:51.815+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\hk2-api-2.5.0.jar
+2020-06-06 14:59:51.816+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\netty-all-4.1.48.Final.jar
+2020-06-06 14:59:51.816+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-logical-plans-4.0.4.jar
+2020-06-06 14:59:51.819+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jctools-core-2.1.2.jar
+2020-06-06 14:59:51.820+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-procedure-4.0.4.jar
+2020-06-06 14:59:51.821+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\txw2-2.3.2.jar
+2020-06-06 14:59:51.822+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-batch-insert-4.0.4.jar
+2020-06-06 14:59:51.822+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jProcesses-1.6.5.jar
+2020-06-06 14:59:51.823+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-server-2.29.jar
+2020-06-06 14:59:51.823+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-lock-4.0.4.jar
+2020-06-06 14:59:51.823+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\slf4j-api-1.7.25.jar
+2020-06-06 14:59:51.824+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-storage-engine-api-4.0.4.jar
+2020-06-06 14:59:51.824+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-monitoring-4.0.4.jar
+2020-06-06 14:59:51.824+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-client-2.29.jar
+2020-06-06 14:59:51.825+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\bcpkix-jdk15on-1.64.jar
+2020-06-06 14:59:51.825+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.xml.bind-api-2.3.2.jar
+2020-06-06 14:59:51.826+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-server-4.0.4.jar
+2020-06-06 14:59:51.826+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-interpreted-runtime-4.0.4.jar
+2020-06-06 14:59:51.826+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-xml-9.4.17.v20190418.jar
+2020-06-06 14:59:51.827+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.ws.rs-api-2.1.5.jar
+2020-06-06 14:59:51.827+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-beanutils-1.9.4.jar
+2020-06-06 14:59:51.828+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-lang-1.5.2.jar
+2020-06-06 14:59:51.828+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-index-4.0.4.jar
+2020-06-06 14:59:51.829+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-import-tool-4.0.4.jar
+2020-06-06 14:59:51.829+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-util-4.0-4.0.4.jar
+2020-06-06 14:59:51.830+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-hk2-2.29.jar
+2020-06-06 14:59:51.830+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\javax.ws.rs-api-2.1.1.jar
+2020-06-06 14:59:51.831+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-event-1.5.2.jar
+2020-06-06 14:59:51.831+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\hk2-locator-2.5.0.jar
+2020-06-06 14:59:51.833+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-kernel-api-4.0.4.jar
+2020-06-06 14:59:51.833+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\javax.servlet-api-3.1.0.jar
+2020-06-06 14:59:51.834+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\hk2-utils-2.5.0.jar
+2020-06-06 14:59:51.834+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\scala-reflect-2.12.7.jar
+2020-06-06 14:59:51.835+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-layout-4.0.4.jar
+2020-06-06 14:59:51.835+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-record-storage-engine-4.0.4.jar
+2020-06-06 14:59:51.836+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\validation-api-2.0.1.Final.jar
+2020-06-06 14:59:51.836+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\lucene-core-8.2.0.jar
+2020-06-06 14:59:51.838+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\lucene-analyzers-common-8.2.0.jar
+2020-06-06 14:59:51.839+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-csv-4.0.4.jar
+2020-06-06 14:59:51.839+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-consistency-check-4.0.4.jar
+2020-06-06 14:59:51.840+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-collections-3.2.2.jar
+2020-06-06 14:59:51.841+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-dbms-4.0.4.jar
+2020-06-06 14:59:51.841+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-cache-1.5.2.jar
+2020-06-06 14:59:51.841+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-token-api-4.0.4.jar
+2020-06-06 14:59:51.842+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jaxb-runtime-2.3.2.jar
+2020-06-06 14:59:51.842+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jna-5.4.0.jar
+2020-06-06 14:59:51.842+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-databind-2.10.0.jar
+2020-06-06 14:59:51.843+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-4.0.4.jar
+2020-06-06 14:59:51.843+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-browser-4.0.7.jar
+2020-06-06 14:59:51.843+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-io-9.4.17.v20190418.jar
+2020-06-06 14:59:51.843+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-configuration-1.10.jar
+2020-06-06 14:59:51.844+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-4.0.4.jar
+2020-06-06 14:59:51.844+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-runtime-util-4.0.4.jar
+2020-06-06 14:59:51.844+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-lang-2.6.jar
+2020-06-06 14:59:51.845+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\slf4j-nop-1.7.25.jar
+2020-06-06 14:59:51.845+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-crypto-hash-1.5.2.jar
+2020-06-06 14:59:51.845+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-bolt-4.0.4.jar
+2020-06-06 14:59:51.846+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\lucene-queryparser-8.2.0.jar
+2020-06-06 14:59:51.846+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-codegen-4.0.4.jar
+2020-06-06 14:59:51.847+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.activation-1.2.1.jar
+2020-06-06 14:59:51.848+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-native-4.0.4.jar
+2020-06-06 14:59:51.849+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-diagnostics-4.0.4.jar
+2020-06-06 14:59:51.849+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-import-util-4.0.4.jar
+2020-06-06 14:59:51.850+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-webapp-9.4.17.v20190418.jar
+2020-06-06 14:59:51.850+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\plugins\*
+2020-06-06 14:59:51.850+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-expression-evaluator-4.0.4.jar
+2020-06-06 14:59:51.851+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-planner-spi-4.0.4.jar
+2020-06-06 14:59:51.851+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-container-servlet-core-2.29.jar
+2020-06-06 14:59:51.852+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-lucene-index-4.0.4.jar
+2020-06-06 14:59:51.853+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-ssl-4.0.4.jar
+2020-06-06 14:59:51.854+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-procedure-api-4.0.4.jar
+2020-06-06 14:59:51.854+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-collections-4.0.4.jar
+2020-06-06 14:59:51.855+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\FastInfoset-1.2.16.jar
+2020-06-06 14:59:51.856+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-jaxrs-json-provider-2.10.0.jar
+2020-06-06 14:59:51.857+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-common-2.29.jar
+2020-06-06 14:59:51.858+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-data-collector-4.0.4.jar
+2020-06-06 14:59:51.858+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-ast-4.0-4.0.4.jar
+2020-06-06 14:59:51.859+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-unsafe-4.0.4.jar
+2020-06-06 14:59:51.859+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-io-2.6.jar
+2020-06-06 14:59:51.860+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-server-9.4.17.v20190418.jar
+2020-06-06 14:59:51.860+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-graph-algo-4.0.4.jar
+2020-06-06 14:59:51.861+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-logging-1.2.jar
+2020-06-06 14:59:51.861+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-kernel-4.0.4.jar
+2020-06-06 14:59:51.861+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-compress-1.19.jar
+2020-06-06 14:59:51.862+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.annotation-api-1.3.4.jar
+2020-06-06 14:59:51.862+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\lucene-codecs-8.2.0.jar
+2020-06-06 14:59:51.863+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.inject-2.5.0.jar
+2020-06-06 14:59:51.863+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\stax-ex-1.8.1.jar
+2020-06-06 14:59:51.863+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-config-core-1.5.2.jar
+2020-06-06 14:59:51.864+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\annotations-4.0.4.jar
+2020-06-06 14:59:51.864+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\caffeine-2.8.0.jar
+2020-06-06 14:59:51.865+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-values-4.0.4.jar
+2020-06-06 14:59:51.865+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-label-index-4.0.4.jar
+2020-06-06 14:59:51.865+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\eclipse-collections-api-10.0.0.jar
+2020-06-06 14:59:51.866+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\istack-commons-runtime-3.0.8.jar
+2020-06-06 14:59:51.866+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-concurrent-4.0.4.jar
+2020-06-06 14:59:51.869+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-container-servlet-2.29.jar
+2020-06-06 14:59:51.870+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\scala-library-2.12.7.jar
+2020-06-06 14:59:51.871+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-schema-4.0.4.jar
+2020-06-06 14:59:51.871+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-expressions-4.0-4.0.4.jar
+2020-06-06 14:59:51.872+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-servlet-9.4.17.v20190418.jar
+2020-06-06 14:59:51.872+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jPowerShell-3.0.jar
+2020-06-06 14:59:51.873+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-annotations-2.10.0.jar
+2020-06-06 14:59:51.873+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\bcprov-jdk15on-1.64.jar
+2020-06-06 14:59:51.874+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-front-end-4.0-4.0.4.jar
+2020-06-06 14:59:51.874+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-configuration-4.0.4.jar
+2020-06-06 14:59:51.874+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-jaxrs-base-2.10.0.jar
+2020-06-06 14:59:51.875+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-crypto-core-1.5.2.jar
+2020-06-06 14:59:51.875+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-fulltext-index-4.0.4.jar
+2020-06-06 14:59:51.875+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-ir-4.0.4.jar
+2020-06-06 14:59:51.876+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-http-9.4.17.v20190418.jar
+2020-06-06 14:59:51.876+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-crypto-cipher-1.5.2.jar
+2020-06-06 14:59:51.876+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-common-4.0.4.jar
+2020-06-06 14:59:51.876+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\zstd-proxy-4.0.4.jar
+2020-06-06 14:59:51.879+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-exceptions-4.0.4.jar
+2020-06-06 14:59:51.879+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\parboiled-core-1.2.0.jar
+2020-06-06 14:59:51.880+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-wal-4.0.4.jar
+2020-06-06 14:59:51.880+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\WMI4Java-1.6.3.jar
+2020-06-06 14:59:51.881+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-config-ogdl-1.5.2.jar
+2020-06-06 14:59:51.882+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-cypher-planner-4.0.4.jar
+2020-06-06 14:59:51.882+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\shiro-core-1.5.2.jar
+2020-06-06 14:59:51.882+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-id-generator-4.0.4.jar
+2020-06-06 14:59:51.883+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\zstd-jni-1.4.3-1.jar
+2020-06-06 14:59:51.883+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jersey-media-jaxb-2.29.jar
+2020-06-06 14:59:51.884+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\javassist-3.22.0-CR2.jar
+2020-06-06 14:59:51.884+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-spatial-index-4.0.4.jar
+2020-06-06 14:59:51.884+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\eclipse-collections-10.0.0.jar
+2020-06-06 14:59:51.885+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\picocli-4.0.4.jar
+2020-06-06 14:59:51.885+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-module-jaxb-annotations-2.10.0.jar
+2020-06-06 14:59:51.886+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jakarta.activation-api-1.2.1.jar
+2020-06-06 14:59:51.886+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-security-4.0.4.jar
+2020-06-06 14:59:51.886+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\commons-lang3-3.9.jar
+2020-06-06 14:59:51.888+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-io-4.0.4.jar
+2020-06-06 14:59:51.890+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-graphdb-api-4.0.4.jar
+2020-06-06 14:59:51.891+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\server-api-4.0.4.jar
+2020-06-06 14:59:51.891+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\parboiled-scala_2.12-1.2.0.jar
+2020-06-06 14:59:51.892+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-logging-4.0.4.jar
+2020-06-06 14:59:51.893+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\activation-1.1.1.jar
+2020-06-06 14:59:51.893+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jackson-core-2.10.0.jar
+2020-06-06 14:59:51.893+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-rewriting-4.0-4.0.4.jar
+2020-06-06 14:59:51.894+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-security-9.4.17.v20190418.jar
+2020-06-06 14:59:51.894+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jaxb-api-2.3.0.jar
+2020-06-06 14:59:51.895+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\jetty-util-9.4.17.v20190418.jar
+2020-06-06 14:59:51.895+0000 INFO [o.n.i.d.DiagnosticsManager]  [classpath] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\lib\neo4j-command-line-4.0.4.jar
+2020-06-06 14:59:51.895+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.895+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.896+0000 INFO [o.n.i.d.DiagnosticsManager]                                 [ Library path ]                                
+2020-06-06 14:59:51.896+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.897+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Java\jdk-11.0.2\bin
+2020-06-06 14:59:51.898+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\Sun\Java\bin
+2020-06-06 14:59:51.899+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\System32
+2020-06-06 14:59:51.899+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows
+2020-06-06 14:59:51.901+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Common Files\Oracle\Java\javapath_target_3121828
+2020-06-06 14:59:51.902+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Intel\iCLS Client
+2020-06-06 14:59:51.903+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Intel\iCLS Client
+2020-06-06 14:59:51.903+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\System32
+2020-06-06 14:59:51.904+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows
+2020-06-06 14:59:51.905+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\System32\wbem
+2020-06-06 14:59:51.905+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\System32\WindowsPowerShell\v1.0
+2020-06-06 14:59:51.906+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Windows\System32\OpenSSH
+2020-06-06 14:59:51.907+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL
+2020-06-06 14:59:51.908+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Intel\Intel(R) Management Engine Components\DAL
+2020-06-06 14:59:51.909+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT
+2020-06-06 14:59:51.910+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Intel\Intel(R) Management Engine Components\IPT
+2020-06-06 14:59:51.915+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn
+2020-06-06 14:59:51.916+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Microsoft SQL Server\110\Tools\Binn
+2020-06-06 14:59:51.917+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Microsoft SQL Server\110\DTS\Binn
+2020-06-06 14:59:51.918+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio
+2020-06-06 14:59:51.919+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn
+2020-06-06 14:59:51.920+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Java\jre1.8.0_212\bin
+2020-06-06 14:59:51.921+0000 INFO [o.n.i.d.DiagnosticsManager] C:\FPrintDirs\FPrintWIN
+2020-06-06 14:59:51.923+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
+2020-06-06 14:59:51.924+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn
+2020-06-06 14:59:51.924+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Microsoft SQL Server\140\Tools\Binn
+2020-06-06 14:59:51.925+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\Microsoft SQL Server\140\DTS\Binn
+2020-06-06 14:59:51.926+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn
+2020-06-06 14:59:51.928+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn
+2020-06-06 14:59:51.930+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio
+2020-06-06 14:59:51.931+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\dotnet
+2020-06-06 14:59:51.931+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files (x86)\dotnet
+2020-06-06 14:59:51.933+0000 INFO [o.n.i.d.DiagnosticsManager] C:\ProgramData\ComposerSetup\bin
+2020-06-06 14:59:51.933+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\nodejs
+2020-06-06 14:59:51.934+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\AppData\Local\Microsoft\WindowsApps
+2020-06-06 14:59:51.935+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\BioStar 2(x64)\ve\dist\lib\bsve\dll
+2020-06-06 14:59:51.936+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Program Files\BioStar 2(x64)\ve\dist\lib\bsve\dll
+2020-06-06 14:59:51.937+0000 INFO [o.n.i.d.DiagnosticsManager] C:\xampp\php
+2020-06-06 14:59:51.938+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\AppData\Roaming\Composer\vendor\bin
+2020-06-06 14:59:51.940+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin
+2020-06-06 14:59:51.940+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\AppData\Roaming\npm
+2020-06-06 14:59:51.942+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\AppData\Local\GitHubDesktop\bin
+2020-06-06 14:59:51.943+0000 INFO [o.n.i.d.DiagnosticsManager] C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j
+2020-06-06 14:59:51.943+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.944+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.944+0000 INFO [o.n.i.d.DiagnosticsManager]                              [ System properties ]                              
+2020-06-06 14:59:51.944+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.946+0000 INFO [o.n.i.d.DiagnosticsManager] sun.desktop = windows
+2020-06-06 14:59:51.946+0000 INFO [o.n.i.d.DiagnosticsManager] awt.toolkit = sun.awt.windows.WToolkit
+2020-06-06 14:59:51.947+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.rejectClientInitiatedRenegotiation = true
+2020-06-06 14:59:51.949+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.isalist = amd64
+2020-06-06 14:59:51.949+0000 INFO [o.n.i.d.DiagnosticsManager] sun.jnu.encoding = Cp1250
+2020-06-06 14:59:51.950+0000 INFO [o.n.i.d.DiagnosticsManager] sun.arch.data.model = 64
+2020-06-06 14:59:51.951+0000 INFO [o.n.i.d.DiagnosticsManager] user.variant = 
+2020-06-06 14:59:51.951+0000 INFO [o.n.i.d.DiagnosticsManager] user.timezone = Europe/Belgrade
+2020-06-06 14:59:51.952+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.launcher = SUN_STANDARD
+2020-06-06 14:59:51.952+0000 INFO [o.n.i.d.DiagnosticsManager] user.country = PL
+2020-06-06 14:59:51.953+0000 INFO [o.n.i.d.DiagnosticsManager] sun.boot.library.path = C:\Program Files\Java\jdk-11.0.2\bin
+2020-06-06 14:59:51.953+0000 INFO [o.n.i.d.DiagnosticsManager] sun.java.command = org.neo4j.server.CommunityEntryPoint --config-dir=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\conf --home-dir=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j
+2020-06-06 14:59:51.953+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.debug = release
+2020-06-06 14:59:51.954+0000 INFO [o.n.i.d.DiagnosticsManager] sun.cpu.endian = little
+2020-06-06 14:59:51.954+0000 INFO [o.n.i.d.DiagnosticsManager] io.netty.tryReflectionSetAccessible = true
+2020-06-06 14:59:51.954+0000 INFO [o.n.i.d.DiagnosticsManager] user.home = C:\Users\User
+2020-06-06 14:59:51.954+0000 INFO [o.n.i.d.DiagnosticsManager] user.language = pl
+2020-06-06 14:59:51.955+0000 INFO [o.n.i.d.DiagnosticsManager] sun.stderr.encoding = cp852
+2020-06-06 14:59:51.955+0000 INFO [o.n.i.d.DiagnosticsManager] file.separator = \
+2020-06-06 14:59:51.955+0000 INFO [o.n.i.d.DiagnosticsManager] sun.stdout.encoding = cp852
+2020-06-06 14:59:51.955+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.tls.ephemeralDHKeySize = 2048
+2020-06-06 14:59:51.956+0000 INFO [o.n.i.d.DiagnosticsManager] user.script = 
+2020-06-06 14:59:51.956+0000 INFO [o.n.i.d.DiagnosticsManager] sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+2020-06-06 14:59:51.956+0000 INFO [o.n.i.d.DiagnosticsManager] user.name = User
+2020-06-06 14:59:51.957+0000 INFO [o.n.i.d.DiagnosticsManager] path.separator = ;
+2020-06-06 14:59:51.957+0000 INFO [o.n.i.d.DiagnosticsManager] jdk.nio.maxCachedBufferSize = 262144
+2020-06-06 14:59:51.957+0000 INFO [o.n.i.d.DiagnosticsManager] file.encoding = UTF-8
+2020-06-06 14:59:51.958+0000 INFO [o.n.i.d.DiagnosticsManager] user.dir = C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j
+2020-06-06 14:59:51.958+0000 INFO [o.n.i.d.DiagnosticsManager] sun.os.patch.level = 
+2020-06-06 14:59:51.958+0000 INFO [o.n.i.d.DiagnosticsManager] sun.io.unicode.encoding = UnicodeLittle
+2020-06-06 14:59:51.959+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:51.959+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:51.959+0000 INFO [o.n.i.d.DiagnosticsManager]                       [ (IANA) TimeZone database version ]                      
+2020-06-06 14:59:51.960+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.015+0000 INFO [o.n.i.d.DiagnosticsManager]   TimeZone version: 2018g (available for 599 zone identifiers)
+2020-06-06 14:59:52.016+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:52.016+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.019+0000 INFO [o.n.i.d.DiagnosticsManager]                             [ Network information ]                             
+2020-06-06 14:59:52.019+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.590+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Software Loopback Interface 1:
+2020-06-06 14:59:52.591+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 127.0.0.1
+2020-06-06 14:59:52.592+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 0:0:0:0:0:0:0:1
+2020-06-06 14:59:52.593+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft 6to4 Adapter:
+2020-06-06 14:59:52.593+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (PPTP):
+2020-06-06 14:59:52.594+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (SSTP):
+2020-06-06 14:59:52.595+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IPv6):
+2020-06-06 14:59:52.595+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft IP-HTTPS Platform Adapter:
+2020-06-06 14:59:52.596+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IP):
+2020-06-06 14:59:52.597+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Bluetooth Device (Personal Area Network):
+2020-06-06 14:59:52.599+0000 INFO [o.n.i.d.DiagnosticsManager] Interface VirtualBox Host-Only Ethernet Adapter:
+2020-06-06 14:59:52.600+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 192.168.56.1
+2020-06-06 14:59:52.601+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:1d1e:61b0:e817:ef38%eth3
+2020-06-06 14:59:52.602+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter:
+2020-06-06 14:59:52.603+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:6563:61e1:b96:9d8b%wlan0
+2020-06-06 14:59:52.603+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (PPPOE):
+2020-06-06 14:59:52.604+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (L2TP):
+2020-06-06 14:59:52.605+0000 INFO [o.n.i.d.DiagnosticsManager] Interface RAS Async Adapter:
+2020-06-06 14:59:52.606+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IKEv2):
+2020-06-06 14:59:52.606+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Ethernet Connection I217-LM:
+2020-06-06 14:59:52.608+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:6953:df30:21f6:f9a2%eth4
+2020-06-06 14:59:52.609+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Kernel Debug Network Adapter:
+2020-06-06 14:59:52.610+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235:
+2020-06-06 14:59:52.610+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 192.168.0.18
+2020-06-06 14:59:52.611+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:9195:f902:bb23:dda3%wlan1
+2020-06-06 14:59:52.612+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Teredo Tunneling Adapter:
+2020-06-06 14:59:52.613+0000 INFO [o.n.i.d.DiagnosticsManager] Interface TAP-Windows Adapter V9:
+2020-06-06 14:59:52.614+0000 INFO [o.n.i.d.DiagnosticsManager]     address: 192.168.233.36
+2020-06-06 14:59:52.614+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:34a1:17dc:ec39:e214%eth6
+2020-06-06 14:59:52.615+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (Network Monitor):
+2020-06-06 14:59:52.616+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2:
+2020-06-06 14:59:52.617+0000 INFO [o.n.i.d.DiagnosticsManager]     address: fe80:0:0:0:ad90:a822:e70:147d%wlan2
+2020-06-06 14:59:52.620+0000 INFO [o.n.i.d.DiagnosticsManager] Interface TAP-Windows Adapter V9-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.621+0000 INFO [o.n.i.d.DiagnosticsManager] Interface TAP-Windows Adapter V9-VirtualBox NDIS Light-Weight Filter-0000:
+2020-06-06 14:59:52.622+0000 INFO [o.n.i.d.DiagnosticsManager] Interface TAP-Windows Adapter V9-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.623+0000 INFO [o.n.i.d.DiagnosticsManager] Interface TAP-Windows Adapter V9-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.624+0000 INFO [o.n.i.d.DiagnosticsManager] Interface VirtualBox Host-Only Ethernet Adapter-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.624+0000 INFO [o.n.i.d.DiagnosticsManager] Interface VirtualBox Host-Only Ethernet Adapter-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.625+0000 INFO [o.n.i.d.DiagnosticsManager] Interface VirtualBox Host-Only Ethernet Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.625+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Ethernet Connection I217-LM-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.626+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Ethernet Connection I217-LM-VirtualBox NDIS Light-Weight Filter-0000:
+2020-06-06 14:59:52.626+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Ethernet Connection I217-LM-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.629+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Ethernet Connection I217-LM-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.629+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.630+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-Virtual WiFi Filter Driver-0000:
+2020-06-06 14:59:52.631+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-Native WiFi Filter Driver-0000:
+2020-06-06 14:59:52.631+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-VirtualBox NDIS Light-Weight Filter-0000:
+2020-06-06 14:59:52.632+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.632+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Intel(R) Centrino(R) Advanced-N 6235-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.633+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.634+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter-Native WiFi Filter Driver-0000:
+2020-06-06 14:59:52.635+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter-VirtualBox NDIS Light-Weight Filter-0000:
+2020-06-06 14:59:52.635+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.636+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.637+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.639+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IP)-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.640+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.641+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (IPv6)-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.641+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.642+0000 INFO [o.n.i.d.DiagnosticsManager] Interface WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.643+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.643+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000:
+2020-06-06 14:59:52.644+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2-VirtualBox NDIS Light-Weight Filter-0000:
+2020-06-06 14:59:52.645+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000:
+2020-06-06 14:59:52.646+0000 INFO [o.n.i.d.DiagnosticsManager] Interface Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000:
+2020-06-06 14:59:52.647+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:52.649+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.650+0000 INFO [o.n.i.d.DiagnosticsManager]                          [ Native access information ]                          
+2020-06-06 14:59:52.650+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.690+0000 INFO [o.n.i.d.DiagnosticsManager] Native access details: Native access is not available for current platform.
+2020-06-06 14:59:52.691+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:52.702+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.702+0000 INFO [o.n.i.d.DiagnosticsManager]                                 [ DBMS config ]                                 
+2020-06-06 14:59:52.704+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:52.713+0000 INFO [o.n.i.d.DiagnosticsManager] DBMS provided settings:
+2020-06-06 14:59:52.723+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.bolt.enabled=true
+2020-06-06 14:59:52.724+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.http.enabled=true
+2020-06-06 14:59:52.725+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.connector.https.enabled=false
+2020-06-06 14:59:52.725+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.import=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\import
+2020-06-06 14:59:52.726+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.directories.neo4j_home=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j
+2020-06-06 14:59:52.727+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.jvm.additional=-Djdk.tls.rejectClientInitiatedRenegotiation=true
+2020-06-06 14:59:52.730+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.tx_log.rotation.retention_policy=1 days
+2020-06-06 14:59:52.731+0000 INFO [o.n.i.d.DiagnosticsManager] dbms.windows_service_name=neo4j
+2020-06-06 14:59:52.731+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:52.910+0000 INFO [o.n.g.f.EditionLocksFactories] Locking implementation 'community' selected.
+2020-06-06 14:59:55.875+0000 INFO [o.n.d.d.DefaultDatabaseManager] Creating 'system' database.
+2020-06-06 14:59:56.221+0000 INFO [o.n.b.BoltServer] Bolt server loaded
+2020-06-06 14:59:57.559+0000 INFO [o.n.d.d.DefaultDatabaseManager] Starting 'system' database.
+2020-06-06 14:59:58.093+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [system] Selected RecordFormat:StandardV4_0[SF4.0.0] record format from store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system
+2020-06-06 14:59:58.104+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [system] Selected format 'RecordFormat:StandardV4_0[SF4.0.0]' for existing store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system with format 'RecordFormat:StandardV4_0[SF4.0.0]'
+2020-06-06 14:59:58.516+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [system] Selected RecordFormat:StandardV4_0[SF4.0.0] record format from store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system
+2020-06-06 14:59:58.518+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [system] Format not configured for store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system. Selected format from the store files: RecordFormat:StandardV4_0[SF4.0.0]
+2020-06-06 14:59:59.668+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 14:59:59.669+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Database: system ]                              
+2020-06-06 14:59:59.670+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 14:59:59.671+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:59.672+0000 INFO [o.n.i.d.DiagnosticsManager]                                   [ Version ]                                   
+2020-06-06 14:59:59.672+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:59.721+0000 INFO [o.n.i.d.DiagnosticsManager] DBMS: community single StoreId{creationTime=1590751024890, randomId=7605295110865186080, storeVersion=3471765337752883975, upgradeTime=1590751024890, upgradeTxId=1}
+2020-06-06 14:59:59.722+0000 INFO [o.n.i.d.DiagnosticsManager] Kernel version: 4.0.4,5d5f3fc27ee891c0b5e152681a222823fb5ad4c8
+2020-06-06 14:59:59.724+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 14:59:59.776+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:59.777+0000 INFO [o.n.i.d.DiagnosticsManager]                                 [ Store files ]                                 
+2020-06-06 14:59:59.781+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 14:59:59.796+0000 INFO [o.n.i.d.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 254837243904 / 78506192896 / 30
+2020-06-06 14:59:59.863+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files stored on file store: NTFS
+2020-06-06 14:59:59.863+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files: (filename : modification date - size)
+2020-06-06 14:59:59.876+0000 INFO [o.n.i.d.DiagnosticsManager]   database_lock: 2020-06-01T18:57:16+0200 - 0B
+2020-06-06 14:59:59.879+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore: 2020-06-01T18:57:16+0200 - 7.998KiB
+2020-06-06 14:59:59.881+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db: 2020-06-06T16:59:59+0200 - 48.00KiB
+2020-06-06 14:59:59.882+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.id: 2020-06-06T16:59:58+0200 - 48.00KiB
+2020-06-06 14:59:59.884+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.indexstats.db: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 14:59:59.885+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labelscanstore.db: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 14:59:59.886+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db: 2020-06-01T18:57:16+0200 - 7.998KiB
+2020-06-06 14:59:59.888+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.890+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2020-06-01T18:57:16+0200 - 7.979KiB
+2020-06-06 14:59:59.913+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.915+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db: 2020-06-01T18:57:16+0200 - 7.998KiB
+2020-06-06 14:59:59.919+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.925+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 14:59:59.928+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.931+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db: 2020-06-01T18:57:16+0200 - 7.968KiB
+2020-06-06 14:59:59.932+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 14:59:59.936+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.938+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.939+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index: 2020-06-01T18:57:16+0200 - 7.998KiB
+2020-06-06 14:59:59.942+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.944+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2020-06-01T18:57:16+0200 - 7.979KiB
+2020-06-06 14:59:59.946+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.948+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 14:59:59.950+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2020-06-06T16:59:58+0200 - 48.00KiB
+2020-06-06 14:59:59.953+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2020-06-01T18:57:16+0200 - 7.983KiB
+2020-06-06 14:59:59.970+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2020-06-06T16:59:59+0200 - 40.00KiB
+2020-06-06 14:59:59.971+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db: 2020-06-01T18:57:16+0200 - 0B
+2020-06-06 14:59:59.985+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.987+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db: 2020-06-01T18:57:16+0200 - 0B
+2020-06-06 14:59:59.990+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.991+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2020-06-01T18:57:16+0200 - 7.979KiB
+2020-06-06 14:59:59.993+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2020-06-06T16:59:58+0200 - 40.00KiB
+2020-06-06 14:59:59.994+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 14:59:59.995+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db.id: 2020-06-06T16:59:59+0200 - 40.00KiB
+2020-06-06 15:00:00.000+0000 INFO [o.n.i.d.DiagnosticsManager]   schema:
+2020-06-06 15:00:00.020+0000 INFO [o.n.i.d.DiagnosticsManager]     index:
+2020-06-06 15:00:00.022+0000 INFO [o.n.i.d.DiagnosticsManager]       native-btree-1.0:
+2020-06-06 15:00:00.022+0000 INFO [o.n.i.d.DiagnosticsManager]         1:
+2020-06-06 15:00:00.024+0000 INFO [o.n.i.d.DiagnosticsManager]           index-1: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 15:00:00.025+0000 INFO [o.n.i.d.DiagnosticsManager]         - Total: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 15:00:00.026+0000 INFO [o.n.i.d.DiagnosticsManager]         3:
+2020-06-06 15:00:00.029+0000 INFO [o.n.i.d.DiagnosticsManager]           index-3: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 15:00:00.030+0000 INFO [o.n.i.d.DiagnosticsManager]         - Total: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 15:00:00.031+0000 INFO [o.n.i.d.DiagnosticsManager]       - Total: 2020-05-30T12:41:03+0200 - 96.00KiB
+2020-06-06 15:00:00.032+0000 INFO [o.n.i.d.DiagnosticsManager]     - Total: 2020-05-30T12:41:03+0200 - 96.00KiB
+2020-06-06 15:00:00.033+0000 INFO [o.n.i.d.DiagnosticsManager]   - Total: 2020-05-30T12:41:03+0200 - 96.00KiB
+2020-06-06 15:00:00.034+0000 INFO [o.n.i.d.DiagnosticsManager] Storage summary: 
+2020-06-06 15:00:00.035+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of store: 959.9KiB
+2020-06-06 15:00:00.036+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of mapped files: 247.9KiB
+2020-06-06 15:00:00.036+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:00.039+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.039+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Transaction log ]                               
+2020-06-06 15:00:00.040+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.058+0000 INFO [o.n.i.d.DiagnosticsManager] Transaction log files stored on file store: NTFS
+2020-06-06 15:00:00.072+0000 INFO [o.n.i.d.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2020-06-06 15:00:00.073+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:00.075+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.075+0000 INFO [o.n.i.d.DiagnosticsManager]                                   [ Id usage ]                                  
+2020-06-06 15:00:00.076+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.079+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore: used=1 high=0
+2020-06-06 15:00:00.080+0000 INFO [o.n.i.d.DiagnosticsManager] NodeStore: used=3 high=2
+2020-06-06 15:00:00.081+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=49 high=48
+2020-06-06 15:00:00.082+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyIndexStore: used=28 high=27
+2020-06-06 15:00:00.083+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=5 high=4
+2020-06-06 15:00:00.083+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore: used=1 high=0
+2020-06-06 15:00:00.084+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyStore: used=40 high=39
+2020-06-06 15:00:00.085+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipStore: used=0 high=-1
+2020-06-06 15:00:00.085+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=1 high=0
+2020-06-06 15:00:00.086+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipTypeStore: used=0 high=-1
+2020-06-06 15:00:00.086+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=3 high=2
+2020-06-06 15:00:00.088+0000 INFO [o.n.i.d.DiagnosticsManager] LabelTokenStore: used=2 high=1
+2020-06-06 15:00:00.089+0000 INFO [o.n.i.d.DiagnosticsManager] SchemaStore: used=5 high=4
+2020-06-06 15:00:00.089+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipGroupStore: used=1 high=0
+2020-06-06 15:00:00.090+0000 INFO [o.n.i.d.DiagnosticsManager] NeoStore: used=15 high=14
+2020-06-06 15:00:00.090+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:00.092+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.094+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Neostore records ]                              
+2020-06-06 15:00:00.094+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.176+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=112, gcTime=0, gcCount=0}
+2020-06-06 15:00:00.222+0000 INFO [o.n.i.d.DiagnosticsManager] TIME (Creation time): 1590751024890
+2020-06-06 15:00:00.223+0000 INFO [o.n.i.d.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 7605295110865186080
+2020-06-06 15:00:00.223+0000 INFO [o.n.i.d.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2020-06-06 15:00:00.224+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 21
+2020-06-06 15:00:00.224+0000 INFO [o.n.i.d.DiagnosticsManager] STORE_VERSION (Store format version): 3471765337752883975
+2020-06-06 15:00:00.225+0000 INFO [o.n.i.d.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2020-06-06 15:00:00.225+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 16
+2020-06-06 15:00:00.226+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2020-06-06 15:00:00.228+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1590751024890
+2020-06-06 15:00:00.229+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): 687975131
+2020-06-06 15:00:00.229+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): -559063315
+2020-06-06 15:00:00.229+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2020-06-06 15:00:00.230+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 16071
+2020-06-06 15:00:00.230+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1590751158027
+2020-06-06 15:00:00.231+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2020-06-06 15:00:00.232+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_MISSING_STORE_FILES_RECOVERY_TIMESTAMP (Timestamp of last attempt to perform a recovery on the store with missing files.): -1
+2020-06-06 15:00:00.233+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:00.234+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.234+0000 INFO [o.n.i.d.DiagnosticsManager]                                [ Store versions ]                               
+2020-06-06 15:00:00.235+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:00.238+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore SF4.0.0
+2020-06-06 15:00:00.240+0000 INFO [o.n.i.d.DiagnosticsManager] NodeStore SF4.0.0
+2020-06-06 15:00:00.240+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:00.241+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyIndexStore SF4.0.0
+2020-06-06 15:00:00.241+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:00.242+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore SF4.0.0
+2020-06-06 15:00:00.242+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyStore SF4.0.0
+2020-06-06 15:00:00.244+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipStore SF4.0.0
+2020-06-06 15:00:00.245+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:00.245+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipTypeStore SF4.0.0
+2020-06-06 15:00:00.245+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:00.323+0000 INFO [o.n.i.d.DiagnosticsManager] LabelTokenStore SF4.0.0
+2020-06-06 15:00:00.326+0000 INFO [o.n.i.d.DiagnosticsManager] SchemaStore SF4.0.0
+2020-06-06 15:00:00.331+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipGroupStore SF4.0.0
+2020-06-06 15:00:00.335+0000 INFO [o.n.i.d.DiagnosticsManager] NeoStore SF4.0.0
+2020-06-06 15:00:00.336+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:00.465+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [system] Label index cleanup job registered
+2020-06-06 15:00:00.466+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [system] Label index cleanup job started
+2020-06-06 15:00:00.491+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [system] Label index cleanup job finished: Number of pages visited: 3, Number of tree nodes: 2, Number of cleaned crashed pointers: 0, Time spent: 19ms
+2020-06-06 15:00:00.493+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [system] Label index cleanup job closed
+2020-06-06 15:00:00.685+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job registered: descriptor=Index( 1, 'constraint_6ad50e5f', UNIQUE BTREE, :label[0](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\1\index-1
+2020-06-06 15:00:00.690+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job started: descriptor=Index( 1, 'constraint_6ad50e5f', UNIQUE BTREE, :label[0](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\1\index-1
+2020-06-06 15:00:00.725+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job finished: descriptor=Index( 1, 'constraint_6ad50e5f', UNIQUE BTREE, :label[0](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\1\index-1 Number of pages visited: 3, Number of tree nodes: 2, Number of cleaned crashed pointers: 0, Time spent: 23ms
+2020-06-06 15:00:00.731+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job closed: descriptor=Index( 1, 'constraint_6ad50e5f', UNIQUE BTREE, :label[0](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\1\index-1
+2020-06-06 15:00:00.794+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job registered: descriptor=Index( 3, 'constraint_952bbd70', UNIQUE BTREE, :label[1](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\3\index-3
+2020-06-06 15:00:00.795+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job started: descriptor=Index( 3, 'constraint_952bbd70', UNIQUE BTREE, :label[1](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\3\index-3
+2020-06-06 15:00:00.812+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job finished: descriptor=Index( 3, 'constraint_952bbd70', UNIQUE BTREE, :label[1](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\3\index-3 Number of pages visited: 3, Number of tree nodes: 2, Number of cleaned crashed pointers: 0, Time spent: 16ms
+2020-06-06 15:00:00.813+0000 INFO [o.n.k.i.i.s.GenericNativeIndexProvider] [system] Schema index cleanup job closed: descriptor=Index( 3, 'constraint_952bbd70', UNIQUE BTREE, :label[1](property[0]), native-btree-1.0 ), indexFile=C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\system\schema\index\native-btree-1.0\3\index-3
+2020-06-06 15:00:00.815+0000 INFO [o.n.k.i.a.i.IndexingService] [system] IndexingService.init: indexes not specifically mentioned above are ONLINE
+2020-06-06 15:00:00.834+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Requirement `Database unavailable` makes database system unavailable.
+2020-06-06 15:00:00.836+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Database system is unavailable.
+2020-06-06 15:00:00.864+0000 INFO [o.n.k.i.a.i.IndexingService] [system] IndexingService.start: indexes not specifically mentioned above are ONLINE
+2020-06-06 15:00:00.887+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Fulfilling of requirement 'Database unavailable' makes database system available.
+2020-06-06 15:00:00.891+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Database system is ready.
+2020-06-06 15:00:00.896+0000 INFO [o.n.m.DatabaseHealth] [system] Database health set to OK
+2020-06-06 15:00:01.263+0000 INFO [o.n.d.d.DefaultDatabaseManager] Creating 'neo4j' database.
+2020-06-06 15:00:01.266+0000 INFO [o.n.d.d.DefaultDatabaseManager] Starting 'neo4j' database.
+2020-06-06 15:00:01.300+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [neo4j] Selected RecordFormat:StandardV4_0[SF4.0.0] record format from store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\neo4j
+2020-06-06 15:00:01.301+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [neo4j] Selected format 'RecordFormat:StandardV4_0[SF4.0.0]' for existing store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\neo4j with format 'RecordFormat:StandardV4_0[SF4.0.0]'
+2020-06-06 15:00:01.468+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [neo4j] Selected RecordFormat:StandardV4_0[SF4.0.0] record format from store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\neo4j
+2020-06-06 15:00:01.469+0000 INFO [o.n.k.i.s.f.RecordFormatSelector] [neo4j] Format not configured for store C:\Users\User\Desktop\Zbiornica\Studia\VI Semestr\Nowoczesne metody przetwarzania danych\V0nskychall\Project\neo4j\data\databases\neo4j. Selected format from the store files: RecordFormat:StandardV4_0[SF4.0.0]
+2020-06-06 15:00:01.674+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 15:00:01.674+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Database: neo4j ]                               
+2020-06-06 15:00:01.675+0000 INFO [o.n.i.d.DiagnosticsManager] ********************************************************************************
+2020-06-06 15:00:01.675+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.676+0000 INFO [o.n.i.d.DiagnosticsManager]                                   [ Version ]                                   
+2020-06-06 15:00:01.676+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.676+0000 INFO [o.n.i.d.DiagnosticsManager] DBMS: community single StoreId{creationTime=1590751026969, randomId=1195867166727121711, storeVersion=3471765337752883975, upgradeTime=1590751026969, upgradeTxId=1}
+2020-06-06 15:00:01.677+0000 INFO [o.n.i.d.DiagnosticsManager] Kernel version: 4.0.4,5d5f3fc27ee891c0b5e152681a222823fb5ad4c8
+2020-06-06 15:00:01.678+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.679+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.679+0000 INFO [o.n.i.d.DiagnosticsManager]                                 [ Store files ]                                 
+2020-06-06 15:00:01.680+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.688+0000 INFO [o.n.i.d.DiagnosticsManager] Disk space on partition (Total / Free / Free %): 254837243904 / 78505181184 / 30
+2020-06-06 15:00:01.693+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files stored on file store: NTFS
+2020-06-06 15:00:01.693+0000 INFO [o.n.i.d.DiagnosticsManager] Storage files: (filename : modification date - size)
+2020-06-06 15:00:01.696+0000 INFO [o.n.i.d.DiagnosticsManager]   database_lock: 2020-06-01T18:57:16+0200 - 0B
+2020-06-06 15:00:01.697+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore: 2020-06-06T16:41:02+0200 - 7.998KiB
+2020-06-06 15:00:01.698+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.counts.db: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.699+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.id: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.700+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.indexstats.db: 2020-06-06T16:41:02+0200 - 40.00KiB
+2020-06-06 15:00:01.701+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labelscanstore.db: 2020-06-06T16:41:02+0200 - 48.00KiB
+2020-06-06 15:00:01.702+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db: 2020-06-01T18:57:16+0200 - 7.998KiB
+2020-06-06 15:00:01.703+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.704+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names: 2020-06-01T18:57:16+0200 - 7.979KiB
+2020-06-06 15:00:01.704+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.labeltokenstore.db.names.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.705+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db: 2020-06-06T16:41:02+0200 - 7.998KiB
+2020-06-06 15:00:01.706+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.id: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.708+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 15:00:01.709+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.nodestore.db.labels.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.711+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db: 2020-06-06T16:41:02+0200 - 7.968KiB
+2020-06-06 15:00:01.712+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 15:00:01.713+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.arrays.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.714+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.id: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.715+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index: 2020-06-06T14:25:32+0200 - 7.998KiB
+2020-06-06 15:00:01.716+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.719+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys: 2020-06-06T14:25:32+0200 - 7.979KiB
+2020-06-06 15:00:01.720+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.index.keys.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.721+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings: 2020-06-06T16:41:02+0200 - 8.000KiB
+2020-06-06 15:00:01.722+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.propertystore.db.strings.id: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.724+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db: 2020-06-01T18:57:16+0200 - 7.983KiB
+2020-06-06 15:00:01.727+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipgroupstore.db.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.729+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db: 2020-06-06T16:41:02+0200 - 7.969KiB
+2020-06-06 15:00:01.731+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshipstore.db.id: 2020-06-06T17:00:01+0200 - 48.00KiB
+2020-06-06 15:00:01.733+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db: 2020-06-06T14:25:32+0200 - 7.998KiB
+2020-06-06 15:00:01.736+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.739+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names: 2020-06-06T14:25:32+0200 - 7.979KiB
+2020-06-06 15:00:01.740+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.relationshiptypestore.db.names.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.741+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db: 2020-06-01T18:57:16+0200 - 8.000KiB
+2020-06-06 15:00:01.743+0000 INFO [o.n.i.d.DiagnosticsManager]   neostore.schemastore.db.id: 2020-06-06T17:00:01+0200 - 40.00KiB
+2020-06-06 15:00:01.743+0000 INFO [o.n.i.d.DiagnosticsManager] Storage summary: 
+2020-06-06 15:00:01.744+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of store: 895.8KiB
+2020-06-06 15:00:01.744+0000 INFO [o.n.i.d.DiagnosticsManager]   Total size of mapped files: 167.8KiB
+2020-06-06 15:00:01.745+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.745+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.746+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Transaction log ]                               
+2020-06-06 15:00:01.746+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.753+0000 INFO [o.n.i.d.DiagnosticsManager] Transaction log files stored on file store: NTFS
+2020-06-06 15:00:01.754+0000 INFO [o.n.i.d.DiagnosticsManager] Oldest transaction 2 found in log with version 0
+2020-06-06 15:00:01.754+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.755+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.755+0000 INFO [o.n.i.d.DiagnosticsManager]                                   [ Id usage ]                                  
+2020-06-06 15:00:01.755+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.756+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore: used=1 high=0
+2020-06-06 15:00:01.756+0000 INFO [o.n.i.d.DiagnosticsManager] NodeStore: used=47 high=46
+2020-06-06 15:00:01.756+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=8 high=7
+2020-06-06 15:00:01.757+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyIndexStore: used=7 high=6
+2020-06-06 15:00:01.757+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=9 high=8
+2020-06-06 15:00:01.758+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore: used=1 high=0
+2020-06-06 15:00:01.758+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyStore: used=52 high=51
+2020-06-06 15:00:01.759+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipStore: used=210 high=209
+2020-06-06 15:00:01.759+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=4 high=3
+2020-06-06 15:00:01.759+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipTypeStore: used=3 high=2
+2020-06-06 15:00:01.760+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore: used=3 high=2
+2020-06-06 15:00:01.760+0000 INFO [o.n.i.d.DiagnosticsManager] LabelTokenStore: used=2 high=1
+2020-06-06 15:00:01.761+0000 INFO [o.n.i.d.DiagnosticsManager] SchemaStore: used=1 high=0
+2020-06-06 15:00:01.761+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipGroupStore: used=1 high=0
+2020-06-06 15:00:01.762+0000 INFO [o.n.i.d.DiagnosticsManager] NeoStore: used=15 high=14
+2020-06-06 15:00:01.762+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.762+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.763+0000 INFO [o.n.i.d.DiagnosticsManager]                               [ Neostore records ]                              
+2020-06-06 15:00:01.763+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.763+0000 INFO [o.n.i.d.DiagnosticsManager] TIME (Creation time): 1590751026969
+2020-06-06 15:00:01.764+0000 INFO [o.n.i.d.DiagnosticsManager] RANDOM_NUMBER (Random number for store id): 1195867166727121711
+2020-06-06 15:00:01.764+0000 INFO [o.n.i.d.DiagnosticsManager] LOG_VERSION (Current log version): 0
+2020-06-06 15:00:01.764+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_ID (Last committed transaction): 161
+2020-06-06 15:00:01.765+0000 INFO [o.n.i.d.DiagnosticsManager] STORE_VERSION (Store format version): 3471765337752883975
+2020-06-06 15:00:01.765+0000 INFO [o.n.i.d.DiagnosticsManager] FIRST_GRAPH_PROPERTY (First property record containing graph properties): -1
+2020-06-06 15:00:01.767+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CONSTRAINT_TRANSACTION (Last committed transaction containing constraint changes): 0
+2020-06-06 15:00:01.768+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_ID (Transaction id most recent upgrade was performed at): 1
+2020-06-06 15:00:01.769+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TIME (Time of last upgrade): 1590751026969
+2020-06-06 15:00:01.769+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_CHECKSUM (Checksum of last committed transaction): 2027380558
+2020-06-06 15:00:01.770+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_CHECKSUM (Checksum of transaction id the most recent upgrade was performed at): -559063315
+2020-06-06 15:00:01.770+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_VERSION (Log version where the last transaction commit entry has been written into): 0
+2020-06-06 15:00:01.770+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_CLOSED_TRANSACTION_LOG_BYTE_OFFSET (Byte offset in the log file where the last transaction commit entry has been written into): 282102
+2020-06-06 15:00:01.771+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_TRANSACTION_COMMIT_TIMESTAMP (Commit time timestamp for last committed transaction): 1591443707103
+2020-06-06 15:00:01.771+0000 INFO [o.n.i.d.DiagnosticsManager] UPGRADE_TRANSACTION_COMMIT_TIMESTAMP (Commit timestamp of transaction the most recent upgrade was performed at): 0
+2020-06-06 15:00:01.772+0000 INFO [o.n.i.d.DiagnosticsManager] LAST_MISSING_STORE_FILES_RECOVERY_TIMESTAMP (Timestamp of last attempt to perform a recovery on the store with missing files.): -1
+2020-06-06 15:00:01.772+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.773+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.773+0000 INFO [o.n.i.d.DiagnosticsManager]                                [ Store versions ]                               
+2020-06-06 15:00:01.773+0000 INFO [o.n.i.d.DiagnosticsManager] --------------------------------------------------------------------------------
+2020-06-06 15:00:01.774+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore SF4.0.0
+2020-06-06 15:00:01.774+0000 INFO [o.n.i.d.DiagnosticsManager] NodeStore SF4.0.0
+2020-06-06 15:00:01.775+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:01.775+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyIndexStore SF4.0.0
+2020-06-06 15:00:01.776+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:01.776+0000 INFO [o.n.i.d.DiagnosticsManager] ArrayPropertyStore SF4.0.0
+2020-06-06 15:00:01.776+0000 INFO [o.n.i.d.DiagnosticsManager] PropertyStore SF4.0.0
+2020-06-06 15:00:01.777+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipStore SF4.0.0
+2020-06-06 15:00:01.778+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:01.778+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipTypeStore SF4.0.0
+2020-06-06 15:00:01.779+0000 INFO [o.n.i.d.DiagnosticsManager] StringPropertyStore SF4.0.0
+2020-06-06 15:00:01.779+0000 INFO [o.n.i.d.DiagnosticsManager] LabelTokenStore SF4.0.0
+2020-06-06 15:00:01.780+0000 INFO [o.n.i.d.DiagnosticsManager] SchemaStore SF4.0.0
+2020-06-06 15:00:01.780+0000 INFO [o.n.i.d.DiagnosticsManager] RelationshipGroupStore SF4.0.0
+2020-06-06 15:00:01.781+0000 INFO [o.n.i.d.DiagnosticsManager] NeoStore SF4.0.0
+2020-06-06 15:00:01.781+0000 INFO [o.n.i.d.DiagnosticsManager] 
+2020-06-06 15:00:01.798+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [neo4j] Label index cleanup job registered
+2020-06-06 15:00:01.799+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [neo4j] Label index cleanup job started
+2020-06-06 15:00:01.801+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [neo4j] Label index cleanup job finished: Number of pages visited: 3, Number of tree nodes: 2, Number of cleaned crashed pointers: 0, Time spent: 1ms
+2020-06-06 15:00:01.801+0000 INFO [o.n.i.i.l.NativeLabelScanStore] [neo4j] Label index cleanup job closed
+2020-06-06 15:00:01.807+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Requirement `Database unavailable` makes database neo4j unavailable.
+2020-06-06 15:00:01.808+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Database neo4j is unavailable.
+2020-06-06 15:00:01.819+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Fulfilling of requirement 'Database unavailable' makes database neo4j available.
+2020-06-06 15:00:01.819+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Database neo4j is ready.
+2020-06-06 15:00:01.820+0000 INFO [o.n.m.DatabaseHealth] [neo4j] Database health set to OK
+2020-06-06 15:00:02.845+0000 INFO [o.n.b.BoltServer] Bolt enabled on localhost:7687.
+2020-06-06 15:00:02.878+0000 INFO [o.n.s.AbstractNeoServer$ServerComponentsLifecycleAdapter] [system] Starting web server
+2020-06-06 15:00:06.002+0000 INFO [o.n.s.AbstractNeoServer$ServerComponentsLifecycleAdapter] [system] Web server started.
+2020-06-06 15:00:13.803+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=187, gcTime=0, gcCount=0}
+2020-06-06 15:00:56.148+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x8df969f9, L:/127.0.0.1:7687 - R:/127.0.0.1:61847] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:00:56.155+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x5dabb60e, L:/127.0.0.1:7687 - R:/127.0.0.1:61841] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.buffer.WrappedByteBuf.writeBytes(WrappedByteBuf.java:821)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:04:46.411+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x491c166b, L:/127.0.0.1:7687 - R:/127.0.0.1:61876] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:04:46.412+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xa9cd31f1, L:/127.0.0.1:7687 - R:/127.0.0.1:61875] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:06:07.957+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x761fec6e, L:/127.0.0.1:7687 - R:/127.0.0.1:61904] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:06:07.959+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xa34fe917, L:/127.0.0.1:7687 - R:/127.0.0.1:61905] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:06:37.751+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xcdac2448, L:/127.0.0.1:7687 - R:/127.0.0.1:61925] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:06:37.752+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x028b3e16, L:/127.0.0.1:7687 - R:/127.0.0.1:61924] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:07:48.894+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x41320655, L:/127.0.0.1:7687 - R:/127.0.0.1:61936] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:07:48.900+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x2bee9b28, L:/127.0.0.1:7687 - R:/127.0.0.1:61937] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:08:07.916+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=159, gcTime=0, gcCount=0}
+2020-06-06 15:14:36.839+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xad71b11a, L:/127.0.0.1:7687 - R:/127.0.0.1:61960] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:14:36.840+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x62038a77, L:/127.0.0.1:7687 - R:/127.0.0.1:61959] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:16:09.694+0000 WARN [o.n.k.i.c.VmPauseMonitorComponent] Detected VM stop-the-world pause: {pauseTime=109, gcTime=0, gcCount=0}
+2020-06-06 15:17:27.746+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0x5248f2d3, L:/127.0.0.1:7687 - R:/127.0.0.1:62003] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:17:27.747+0000 ERROR [o.n.b.t.p.HouseKeeper] Fatal error occurred when handling a client connection: [id: 0xbf6c62dc, L:/127.0.0.1:7687 - R:/127.0.0.1:62004] Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+java.io.IOException: Istniejące połączenie zostało gwałtownie zamknięte przez zdalnego hosta
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-06 15:17:30.741+0000 INFO [o.n.g.f.DatabaseManagementServiceFactory] Shutdown started
+2020-06-06 15:17:30.754+0000 INFO [o.n.d.d.DefaultDatabaseManager] Stop 'neo4j' database.
+2020-06-06 15:17:30.756+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Requirement `Database unavailable` makes database neo4j unavailable.
+2020-06-06 15:17:30.757+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [neo4j] Database neo4j is unavailable.
+2020-06-06 15:17:30.786+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Database shutdown" @ txId: 161 checkpoint started...
+2020-06-06 15:17:31.002+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [neo4j] Checkpoint triggered by "Database shutdown" @ txId: 161 checkpoint completed in 214ms
+2020-06-06 15:17:31.052+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [neo4j] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
+2020-06-06 15:17:31.278+0000 INFO [o.n.d.d.DefaultDatabaseManager] Stop 'system' database.
+2020-06-06 15:17:31.279+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Requirement `Database unavailable` makes database system unavailable.
+2020-06-06 15:17:31.279+0000 INFO [o.n.k.a.DatabaseAvailabilityGuard] [system] Database system is unavailable.
+2020-06-06 15:17:31.282+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [system] Checkpoint triggered by "Database shutdown" @ txId: 21 checkpoint started...
+2020-06-06 15:17:31.492+0000 INFO [o.n.k.i.t.l.c.CheckPointerImpl] [system] Checkpoint triggered by "Database shutdown" @ txId: 21 checkpoint completed in 209ms
+2020-06-06 15:17:31.493+0000 INFO [o.n.k.i.t.l.p.LogPruningImpl] [system] No log version pruned. The strategy used was '1 days'. Last checkpoint was made in log version 0.
