@@ -46,6 +46,20 @@ router.post('/users', ensureAuthenticated, (req, res) => {
     });
 });
 
+// Find connections
+router.post('/findConnection', ensureAuthenticated, (req, res) => {
+    const conArr = [];
+    session.run('MATCH (a:Person{email:$emailParam}),(b:Person{email:$emailFriend}), p=shortestPath((a)-[*]-(b)) RETURN p', {emailParam: req.user.records[0]._fields[0].properties.email, emailFriend: req.body.email}).then(result => {
+        //console.log(JSON.stringify(result.records[0]._fields[0].segments));
+        result.records[0]._fields[0].segments.forEach(record => {
+            conArr.push({startName: record.start.properties.name + " " + record.start.properties.surname, relation: record.relationship.type, endName: record.end.properties.name + " " + record.end.properties.surname});
+        })
+        res.render('contact', {contact: conArr});
+    }).catch(err => {
+        console.log(err);
+    });
+});
+
 // Get people that you've invited
 router.get('/invited/:surname?', ensureAuthenticated, (req, res) => {
     session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person) WHERE m.surname CONTAINS $surnameParam AND NOT(m.email CONTAINS $email) RETURN m;', {
