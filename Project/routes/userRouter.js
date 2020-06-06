@@ -259,7 +259,6 @@ router.post('/email', ensureAuthenticated, (req, res) => {
                 emailValue: req.user.records[0]._fields[0].properties.email,
                 newEmail: req.body.newEmail
             }).then(result => {
-                console.log('CYCE DUPA');
                 res.redirect('logout');
             }).catch(err => {
                 console.log(err);
