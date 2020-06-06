@@ -137,6 +137,11 @@
                                 <a href="" class="card-link">
                                     <i class="fa fa-gittip"></i>
                                     Like</a>
+                                    <%= post.likes %>
+                                    <form method="POST" action="like">
+                                        <input type="hidden" name = "value" value="<%=post.value%>">
+                                        <button type="submit" class="btn btn-danger pull-right">Like</button>
+                                    </form>
                             </div>
                         </div>
 

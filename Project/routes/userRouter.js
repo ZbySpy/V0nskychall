@@ -70,10 +70,11 @@ router.post('/friends', ensureAuthenticated, (req, res) => {
 
 // Get posts of your friends
 router.get('/posts', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) RETURN n, p ORDER BY n.date;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
+    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) OPTIONAL MATCH ()-[r:LIKE]->(n)-[:POSTED_BY]->(p)<-[:FRIEND_WITH]-(m) RETURN n, p, COUNT(r) ORDER BY n.date;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
         const postsArr = [];
         result.records.forEach(record => {
-            postsArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, date: record._fields[0].properties.date, surname: record._fields[1].properties.surname, name: record._fields[1].properties.name});
+            console.log(record._fields[2]);
+            postsArr.push({id: record._fields[0].identity.low, value: record._fields[0].properties.value, date: record._fields[0].properties.date, surname: record._fields[1].properties.surname, name: record._fields[1].properties.name, likes: record._fields[2].low});
         });
         res.render('posts', {post: postsArr, user: req.user});
     }).catch(err => {
@@ -114,9 +115,22 @@ router.post('/post', ensureAuthenticated, (req, res) => {
 });
 
 // Like post
-router.post('/like/:postID', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(p:Post) WHERE id(p)=$idValue CREATE (p)<-[:LIKE]-(m:Person{email: $emailValue}) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, idValue: req.params.postID}).then(result => {
-        res.render('posts', {posts: postsArr})
+router.post('/like', ensureAuthenticated, (req, res) => {
+    session.run('MATCH(p:Post{value: $postValue})<-[r:LIKE]-(m:Person{email: $emailValue}) RETURN COUNT(r)', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result =>{
+        if(result.records[0]._fields[0].low == 0){
+            session.run('MATCH(p:Post{value: $postValue}), (m:Person{email: $emailValue}) CREATE (p)<-[:LIKE]-(m) RETURN p,m', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+                res.redirect('posts');
+            }).catch(err => {
+                console.log(err);
+            });
+        }else{
+            session.run('MATCH(p:Post{value: $postValue})<-[r:LIKE]-(m:Person{email: $emailValue}) DELETE r', {emailValue: req.user.records[0]._fields[0].properties.email, postValue: req.body.value}).then(result => {
+                res.redirect('posts');
+            }).catch(err => {
+                console.log(err);
+            });
+        }
+        res.redirect('posts');
     }).catch(err => {
         console.log(err);
     });
