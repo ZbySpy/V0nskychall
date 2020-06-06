@@ -9,7 +9,7 @@ const session = driver.session();
 // Get users list 
 router.get('/users', ensureAuthenticated , (req, res) => {
     console.log(req.body.surname);
-    session.run('MATCH(n: Person) WHERE n.surname CONTAINS $surname AND NOT(n.email CONTAINS $email) RETURN n;', {surname: req.body.surname ? req.body.surname : "", email: req.user.records[0]._fields[0].properties.email}).then(result => {
+    session.run('MATCH(n: Person),(p:Person{email:$email}) WHERE NOT (n)<-[:FRIEND_WITH]-(p) RETURN n;', {surname: req.body.surname ? req.body.surname : "", email: req.user.records[0]._fields[0].properties.email}).then(result => {
         const usersArr = [];
         result.records.forEach(record => {
             usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
@@ -23,7 +23,7 @@ router.get('/users', ensureAuthenticated , (req, res) => {
 
 // Get users list - with search by surname
 router.post('/users', ensureAuthenticated , (req, res) => {
-    session.run('MATCH(n: Person) WHERE n.surname CONTAINS $surname AND NOT(n.email CONTAINS $email) RETURN n;', {surname: req.body.surname ? req.body.surname : "", email: req.user.records[0]._fields[0].properties.email}).then(result => {
+    session.run('MATCH(n: Person),(p:Person{email:$email}) WHERE n.surname CONTAINS $surname AND NOT (n)<-[:FRIEND_WITH]-(p) RETURN n;', {surname: req.body.surname ? req.body.surname : "", email: req.user.records[0]._fields[0].properties.email}).then(result => {
         const usersArr = [];
         result.records.forEach(record => {
             usersArr.push({id: record._fields[0].identity.low, name: record._fields[0].properties.name, surname: record._fields[0].properties.surname, email: record._fields[0].properties.email});
@@ -101,7 +101,6 @@ router.post('/getFriends', ensureAuthenticated, (req, res) => {
 
 // Add to friends
 router.post('/friends', ensureAuthenticated, (req, res) => {
-    console.log(req.body.id);
     session.run('MATCH(n:Person{email:$emailParam}),(m:Person{email:$emailFriend}) CREATE (n)-[:FRIEND_WITH]->(m)', {emailParam: req.user.records[0]._fields[0].properties.email, emailFriend: req.body.emailFriend}).then(result => {
         res.redirect('/user/invited');
     }).catch(err => {
