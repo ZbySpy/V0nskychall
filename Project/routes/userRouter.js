@@ -87,7 +87,7 @@ router.get('/friends/:surname?', ensureAuthenticated, (req, res) => {
 });
 
 //Get all friends - with search by surname
-router.post('/friends', ensureAuthenticated, (req, res) => {
+router.post('/getFriends', ensureAuthenticated, (req, res) => {
     session.run('MATCH(Person{email:$emailParam})-[:FRIEND_WITH]->(m:Person)-[:FRIEND_WITH]->(Person{email:$emailParam}) WHERE m.surname CONTAINS $surnameParam RETURN m;', {emailParam: req.user.records[0]._fields[0].properties.email, surnameParam: req.body.surname ? req.body.surname : ""}).then(result => {
         const friendsArr = [];
         result.records.forEach(record => {
@@ -111,7 +111,7 @@ router.post('/friends', ensureAuthenticated, (req, res) => {
 
 // Get posts of your friends
 router.get('/posts', ensureAuthenticated, (req, res) => {
-    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) OPTIONAL MATCH ()-[r:LIKE]->(n)-[:POSTED_BY]->(p)<-[:FRIEND_WITH]-(m) RETURN n, p, COUNT(r) ORDER BY n.date;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
+    session.run('MATCH(n: Post)-[:POSTED_BY]->(p:Person)<-[:FRIEND_WITH]-(m:Person{email: $emailValue}) OPTIONAL MATCH ()-[r:LIKE]->(n)-[:POSTED_BY]->(p)<-[:FRIEND_WITH]-(m) RETURN n, p, COUNT(r) ORDER BY n.date DESC;', {emailValue: req.user.records[0]._fields[0].properties.email}).then(result => {
         const postsArr = [];
         result.records.forEach(record => {
             console.log(record._fields[2]);
