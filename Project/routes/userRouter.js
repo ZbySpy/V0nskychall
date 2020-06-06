@@ -49,12 +49,16 @@ router.post('/users', ensureAuthenticated, (req, res) => {
 // Find connections
 router.post('/findConnection', ensureAuthenticated, (req, res) => {
     const conArr = [];
-    session.run('MATCH (a:Person{email:$emailParam}),(b:Person{email:$emailFriend}), p=shortestPath((a)-[*]-(b)) RETURN p', {emailParam: req.user.records[0]._fields[0].properties.email, emailFriend: req.body.email}).then(result => {
+    let target = '';
+    session.run('MATCH (a:Person{email:$emailParam}),(b:Person{email:$emailFriend}), p=shortestPath((a)-[*]-(b)) RETURN p', 
+    {emailParam: req.user.records[0]._fields[0].properties.email, emailFriend: req.body.email}).then(result => {
         //console.log(JSON.stringify(result.records[0]._fields[0].segments));
+        target = result.records[0]._fields[0].end.properties.name+' '+result.records[0]._fields[0].end.properties.surname;
         result.records[0]._fields[0].segments.forEach(record => {
-            conArr.push({startName: record.start.properties.name + " " + record.start.properties.surname, relation: record.relationship.type, endName: record.end.properties.name + " " + record.end.properties.surname});
+            conArr.push({startName: record.start.properties.name + " " + record.start.properties.surname, 
+            relation: record.relationship.type=="FRIEND_WITH" ? "is friend with" : "", endName: record.end.properties.name + " " + record.end.properties.surname});
         })
-        res.render('contact', {contact: conArr});
+        res.render('contact', {contact: conArr, user: req.user, target});
     }).catch(err => {
         console.log(err);
     });
